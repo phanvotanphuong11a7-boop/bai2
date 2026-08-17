@@ -1,0 +1,928 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"465 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 465:     struct {
+[s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S20 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"475
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 475:     struct {
+[s S21 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S21 . . TMR0IF . TMR0IE ]
+"464
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 464: typedef union {
+[u S19 `S20 1 `S21 1 ]
+[n S19 . . . ]
+"482
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS19 ~T0 @X0 0 e@11 ]
+"6 ./sys/sys_tick/sys_tick.h
+[; ;./sys/sys_tick/sys_tick.h: 6: void SysTick_Update(void);
+[v _SysTick_Update `(v ~T0 @X0 0 ef ]
+"1708 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1708:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"1707
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1707: typedef union {
+[u S66 `S67 1 ]
+[n S66 . . ]
+"1718
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS66 ~T0 @X0 0 e@140 ]
+"543
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 543:     struct {
+[s S23 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S23 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 542: typedef union {
+[u S22 `S23 1 ]
+[n S22 . . ]
+"553
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS22 ~T0 @X0 0 e@12 ]
+"1140
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"1044
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1044:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"1054
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1054:     struct {
+[s S42 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S42 . RCD8 . RC9 ]
+"1059
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1059:     struct {
+[s S43 :6 `uc 1 :1 `uc 1 ]
+[n S43 . . nRC8 ]
+"1063
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1063:     struct {
+[s S44 :6 `uc 1 :1 `uc 1 ]
+[n S44 . . RC8_9 ]
+"1043
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1043: typedef union {
+[u S40 `S41 1 `S42 1 `S43 1 `S44 1 ]
+[n S40 . . . . . ]
+"1068
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1068: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
+[v _RCSTAbits `VS40 ~T0 @X0 0 e@24 ]
+[p mainexit ]
+"3 ./sys/sys_config/sys_config.h
+[; ;./sys/sys_config/sys_config.h: 3: void sys_config(void);
+[v _sys_config `(v ~T0 @X0 0 ef ]
+"5 ./hal/hal_pwm/hal_pwm.h
+[; ;./hal/hal_pwm/hal_pwm.h: 5: void HAL_PWM_Init(void);
+[v _HAL_PWM_Init `(v ~T0 @X0 0 ef ]
+"5 ./hal/hal_adc/hal_adc.h
+[; ;./hal/hal_adc/hal_adc.h: 5: void HAL_ADC_Init(void);
+[v _HAL_ADC_Init `(v ~T0 @X0 0 ef ]
+"5 ./hal/hal_uart/hal_uart.h
+[; ;./hal/hal_uart/hal_uart.h: 5: void HAL_UART_Init(uint32_t baud_rate);
+[v _HAL_UART_Init `(v ~T0 @X0 0 ef1`ul ]
+"5 ./sys/sys_tick/sys_tick.h
+[; ;./sys/sys_tick/sys_tick.h: 5: void SysTick_Init(void);
+[v _SysTick_Init `(v ~T0 @X0 0 ef ]
+"73 main.c
+[; ;main.c: 73: 
+[c E1424 0 1 2 3 4 .. ]
+[n E1424 . PORT_A PORT_B PORT_C PORT_D PORT_E  ]
+[c E1431 0 1 2 3 4 5 6 7 .. ]
+[n E1431 . PIN_0 PIN_1 PIN_2 PIN_3 PIN_4 PIN_5 PIN_6 PIN_7  ]
+[c E1445 0 1 .. ]
+[n E1445 . GPIO_LOW GPIO_HIGH  ]
+"27 ./hal/hal_gpio/hal_gpio.h
+[; ;./hal/hal_gpio/hal_gpio.h: 27: gpio_state_t HAL_GPIO_ReadPin(gpio_port_t port, gpio_pin_t pin);
+[v _HAL_GPIO_ReadPin `(E1445 ~T0 @X0 0 ef2`E1424`E1431 ]
+"26
+[; ;./hal/hal_gpio/hal_gpio.h: 26: void HAL_GPIO_WritePin(gpio_port_t port, gpio_pin_t pin, gpio_state_t state);
+[v _HAL_GPIO_WritePin `(v ~T0 @X0 0 ef3`E1424`E1431`E1445 ]
+"6 ./hal/hal_pwm/hal_pwm.h
+[; ;./hal/hal_pwm/hal_pwm.h: 6: void HAL_PWM_SetDuty(uint16_t duty);
+[v _HAL_PWM_SetDuty `(v ~T0 @X0 0 ef1`us ]
+"7 ./sys/sys_tick/sys_tick.h
+[; ;./sys/sys_tick/sys_tick.h: 7: uint32_t SysTick_GetMs(void);
+[v _SysTick_GetMs `(ul ~T0 @X0 0 ef ]
+"6 ./hal/hal_adc/hal_adc.h
+[; ;./hal/hal_adc/hal_adc.h: 6: uint16_t HAL_ADC_Read(uint8_t channel);
+[v _HAL_ADC_Read `(us ~T0 @X0 0 ef1`uc ]
+"7 ./hal/hal_uart/hal_uart.h
+[; ;./hal/hal_uart/hal_uart.h: 7: void HAL_UART_WriteString(const char* str);
+[v _HAL_UART_WriteString `(v ~T0 @X0 0 ef1`*Cuc ]
+"8
+[; ;./hal/hal_uart/hal_uart.h: 8: void HAL_UART_WriteInt(uint16_t val);
+[v _HAL_UART_WriteInt `(v ~T0 @X0 0 ef1`us ]
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"230
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 230: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"292
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 292: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"354
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 354: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"416
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 416: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"454
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 454: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"461
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 461: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"539
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 539: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"595
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 595: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"652
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 652: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"659
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 659: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"666
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 666: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"673
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 673: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"767
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 767: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"774
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 774: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"845
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 845: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"852
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 852: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"922
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 922: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"929
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 929: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"936
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 936: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"943
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 943: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"1040
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1040: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1135
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1135: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1142
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1142: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1149
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1149: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1156
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1156: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1163
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1163: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1170
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1170: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1240
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1240: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1247
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1247: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1348
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1348: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1418
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1418: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1480
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1480: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1542
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1542: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1604
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1604: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1666
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1666: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1704
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1704: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1760
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1760: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1817
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1817: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1864
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1864: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1929
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1929: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1981
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1981: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"2043
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2043: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"2050
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2050: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"2057
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2057: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"2062
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2062: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2179
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2179: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2348
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2348: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2418
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2418: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2488
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2488: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2558
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2558: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2644
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2644: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2706
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2706: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2776
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2776: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2846
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2846: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2928
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2928: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2972
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2972: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2979
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2979: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"3013
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3013: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"3066
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3066: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"3131
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3131: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3196
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3196: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3247
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3247: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3252
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3252: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3259
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3259: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3266
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3266: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3273
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3273: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3280
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3280: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3337
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3337: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3389
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3389: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3451
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3451: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3501
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3501: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3546
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"13 main.c
+[; ;main.c: 13:     if (PIE1bits.RCIE && PIR1bits.RCIF) {
+[p x FOSC  =  HS ]
+"14
+[; ;main.c: 14:         char temp_rx = RCREG;
+[p x WDTE  =  OFF ]
+"15
+[; ;main.c: 15: 
+[p x PWRTE  =  ON ]
+"16
+[; ;main.c: 16: 
+[p x MCLRE  =  ON ]
+"17
+[; ;main.c: 17:         if (temp_rx != '\n' && temp_rx != '\r') {
+[p x CP  =  OFF ]
+"18
+[; ;main.c: 18:             rx_cmd = temp_rx;
+[p x CPD  =  OFF ]
+"19
+[; ;main.c: 19:         }
+[p x BOREN  =  ON ]
+"20
+[; ;main.c: 20:         if (RCSTAbits.OERR) {
+[p x IESO  =  OFF ]
+"21
+[; ;main.c: 21:             RCSTAbits.CREN = 0;
+[p x FCMEN  =  OFF ]
+"22
+[; ;main.c: 22:             RCSTAbits.CREN = 1;
+[p x LVP  =  OFF ]
+"26
+[; ;main.c: 26: 
+[v _rx_cmd `Vuc ~T0 @X0 1 e ]
+[i _rx_cmd
+-> -> 0 `i `uc
+]
+[v $root$_ISR `(v ~T0 @X0 0 e ]
+"29
+[; ;main.c: 29:     HAL_PWM_Init();
+[v _ISR `(v ~T1 @X0 1 ef ]
+{
+[e :U _ISR ]
+[f ]
+"31
+[; ;main.c: 31:     HAL_UART_Init(9600);
+[e $ ! && != -> . . _INTCONbits 0 5 `i -> 0 `i != -> . . _INTCONbits 0 2 `i -> 0 `i 143  ]
+{
+"32
+[; ;main.c: 32:     SysTick_Init();
+[e ( _SysTick_Update ..  ]
+"33
+[; ;main.c: 33: 
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"34
+[; ;main.c: 34: 
+}
+[e :U 143 ]
+"37
+[; ;main.c: 37:     INTCONbits.GIE = 1;
+[e $ ! && != -> . . _PIE1bits 0 5 `i -> 0 `i != -> . . _PIR1bits 0 5 `i -> 0 `i 144  ]
+{
+"38
+[; ;main.c: 38: 
+[v _temp_rx `uc ~T0 @X0 1 a ]
+[e = _temp_rx -> _RCREG `uc ]
+"41
+[; ;main.c: 41:     _Bool pot_enabled = 0;
+[e $ ! && != -> _temp_rx `ui -> 10 `ui != -> _temp_rx `ui -> 13 `ui 145  ]
+{
+"42
+[; ;main.c: 42: 
+[e = _rx_cmd _temp_rx ]
+"43
+[; ;main.c: 43: 
+}
+[e :U 145 ]
+"44
+[; ;main.c: 44:     _Bool p_bt1 = 1, p_bt2 = 1, p_bt3 = 1, p_bt4 = 1;
+[e $ ! != -> . . _RCSTAbits 0 1 `i -> 0 `i 146  ]
+{
+"45
+[; ;main.c: 45:     uint32_t last_uart_time = 0;
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+"46
+[; ;main.c: 46: 
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"47
+[; ;main.c: 47:     while(1) {
+}
+[e :U 146 ]
+"48
+[; ;main.c: 48: 
+}
+[e :U 144 ]
+"49
+[; ;main.c: 49:         _Bool c_bt1 = (HAL_GPIO_ReadPin(PORT_B, PIN_3) == GPIO_LOW);
+[e :UE 142 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"51
+[; ;main.c: 51:         _Bool c_bt3 = (HAL_GPIO_ReadPin(PORT_B, PIN_5) == GPIO_LOW);
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"52
+[; ;main.c: 52:         _Bool c_bt4 = (HAL_GPIO_ReadPin(PORT_B, PIN_2) == GPIO_LOW);
+[e ( _sys_config ..  ]
+"53
+[; ;main.c: 53: 
+[e ( _HAL_PWM_Init ..  ]
+"54
+[; ;main.c: 54: 
+[e ( _HAL_ADC_Init ..  ]
+"55
+[; ;main.c: 55:         _Bool press_bt1 = (c_bt1 && !p_bt1);
+[e ( _HAL_UART_Init (1 -> -> -> 9600 `i `l `ul ]
+"56
+[; ;main.c: 56:         _Bool press_bt2 = (c_bt2 && !p_bt2);
+[e ( _SysTick_Init ..  ]
+"59
+[; ;main.c: 59: 
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"60
+[; ;main.c: 60: 
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"61
+[; ;main.c: 61:         if (rx_cmd == 'R') {
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"63
+[; ;main.c: 63:             HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_LOW);
+[v _lock_state `uc ~T0 @X0 1 a ]
+[e = _lock_state -> -> 0 `i `uc ]
+"64
+[; ;main.c: 64:             HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_LOW);
+[v _start_time `ul ~T0 @X0 1 a ]
+[e = _start_time -> -> -> 0 `i `l `ul ]
+"65
+[; ;main.c: 65:             HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_LOW);
+[v _pot_enabled `a ~T0 @X0 1 a ]
+[e = _pot_enabled -> -> 0 `i `a ]
+"68
+[; ;main.c: 68:             rx_cmd = 0;
+[v _p_bt1 `a ~T0 @X0 1 a ]
+[e = _p_bt1 -> -> 1 `i `a ]
+[v _p_bt2 `a ~T0 @X0 1 a ]
+[e = _p_bt2 -> -> 1 `i `a ]
+[v _p_bt3 `a ~T0 @X0 1 a ]
+[e = _p_bt3 -> -> 1 `i `a ]
+[v _p_bt4 `a ~T0 @X0 1 a ]
+[e = _p_bt4 -> -> 1 `i `a ]
+"69
+[; ;main.c: 69:         }
+[v _last_uart_time `ul ~T0 @X0 1 a ]
+[e = _last_uart_time -> -> -> 0 `i `l `ul ]
+"71
+[; ;main.c: 71: 
+[e :U 149 ]
+{
+"73
+[; ;main.c: 73: 
+[v _c_bt1 `a ~T0 @X0 1 a ]
+[e = _c_bt1 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 3 `ui -> . `E1445 0 `ui `i `a ]
+"74
+[; ;main.c: 74:         switch(lock_state) {
+[v _c_bt2 `a ~T0 @X0 1 a ]
+[e = _c_bt2 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 4 `ui -> . `E1445 0 `ui `i `a ]
+"75
+[; ;main.c: 75:             case 0:
+[v _c_bt3 `a ~T0 @X0 1 a ]
+[e = _c_bt3 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 5 `ui -> . `E1445 0 `ui `i `a ]
+"76
+[; ;main.c: 76:                 if (press_bt1 || rx_cmd == 'F') {
+[v _c_bt4 `a ~T0 @X0 1 a ]
+[e = _c_bt4 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 2 `ui -> . `E1445 0 `ui `i `a ]
+"79
+[; ;main.c: 79:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_HIGH);
+[v _press_bt1 `a ~T0 @X0 1 a ]
+[e = _press_bt1 -> -> && != -> _c_bt1 `i -> 0 `i ! != -> _p_bt1 `i -> 0 `i `i `a ]
+"80
+[; ;main.c: 80:                     HAL_PWM_SetDuty(1023);
+[v _press_bt2 `a ~T0 @X0 1 a ]
+[e = _press_bt2 -> -> && != -> _c_bt2 `i -> 0 `i ! != -> _p_bt2 `i -> 0 `i `i `a ]
+"81
+[; ;main.c: 81:                     pot_enabled = 0;
+[v _press_bt3 `a ~T0 @X0 1 a ]
+[e = _press_bt3 -> -> && != -> _c_bt3 `i -> 0 `i ! != -> _p_bt3 `i -> 0 `i `i `a ]
+"82
+[; ;main.c: 82:                     rx_cmd = 0;
+[v _press_bt4 `a ~T0 @X0 1 a ]
+[e = _press_bt4 -> -> && != -> _c_bt4 `i -> 0 `i ! != -> _p_bt4 `i -> 0 `i `i `a ]
+"85
+[; ;main.c: 85:                     lock_state = 2;
+[e $ ! == -> _rx_cmd `ui -> 82 `ui 151  ]
+{
+"86
+[; ;main.c: 86:                     start_time = SysTick_GetMs();
+[e = _lock_state -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:                     HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_HIGH);
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 0 ]
+"88
+[; ;main.c: 88:                     HAL_PWM_SetDuty(1023);
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 0 ]
+"89
+[; ;main.c: 89:                     pot_enabled = 0;
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 0 ]
+"90
+[; ;main.c: 90:                     rx_cmd = 0;
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"91
+[; ;main.c: 91:                 }
+[e = _pot_enabled -> -> 0 `i `a ]
+"92
+[; ;main.c: 92:                 else if (press_bt3 || rx_cmd == 'S') {
+[e = _rx_cmd -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93:                     lock_state = 3;
+}
+[e :U 151 ]
+"98
+[; ;main.c: 98:                     rx_cmd = 0;
+[e $U 153  ]
+{
+"99
+[; ;main.c: 99:                 }
+[e :U 154 ]
+"100
+[; ;main.c: 100:                 break;
+[e $ ! || != -> _press_bt1 `i -> 0 `i == -> _rx_cmd `ui -> 70 `ui 155  ]
+{
+"101
+[; ;main.c: 101: 
+[e = _lock_state -> -> 1 `i `uc ]
+"102
+[; ;main.c: 102:             case 1:
+[e = _start_time ( _SysTick_GetMs ..  ]
+"103
+[; ;main.c: 103: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 1 ]
+"104
+[; ;main.c: 104:                 if (press_bt1 || rx_cmd == 'F') {
+[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
+"105
+[; ;main.c: 105:                     start_time = SysTick_GetMs();
+[e = _pot_enabled -> -> 0 `i `a ]
+"106
+[; ;main.c: 106:                     rx_cmd = 0;
+[e = _rx_cmd -> -> 0 `i `uc ]
+"107
+[; ;main.c: 107:                 }
+}
+[e $U 156  ]
+"108
+[; ;main.c: 108: 
+[e :U 155 ]
+[e $ ! || != -> _press_bt2 `i -> 0 `i == -> _rx_cmd `ui -> 66 `ui 157  ]
+{
+"109
+[; ;main.c: 109:                 if (press_bt4 || rx_cmd == 'P') {
+[e = _lock_state -> -> 2 `i `uc ]
+"110
+[; ;main.c: 110:                     pot_enabled = !pot_enabled;
+[e = _start_time ( _SysTick_GetMs ..  ]
+"111
+[; ;main.c: 111:                     rx_cmd = 0;
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 1 ]
+"112
+[; ;main.c: 112:                 }
+[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
+"113
+[; ;main.c: 113:                 if (pot_enabled) {
+[e = _pot_enabled -> -> 0 `i `a ]
+"114
+[; ;main.c: 114:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
+[e = _rx_cmd -> -> 0 `i `uc ]
+"115
+[; ;main.c: 115:                 }
+}
+[e $U 158  ]
+"116
+[; ;main.c: 116: 
+[e :U 157 ]
+[e $ ! || != -> _press_bt3 `i -> 0 `i == -> _rx_cmd `ui -> 83 `ui 159  ]
+{
+"117
+[; ;main.c: 117:                 if ((SysTick_GetMs() - start_time) >= 5000) {
+[e = _lock_state -> -> 3 `i `uc ]
+"118
+[; ;main.c: 118:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_LOW);
+[e = _start_time ( _SysTick_GetMs ..  ]
+"119
+[; ;main.c: 119:                     HAL_PWM_SetDuty(0);
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 1 ]
+"120
+[; ;main.c: 120:                     lock_state = 0;
+[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
+"121
+[; ;main.c: 121:                 }
+[e = _pot_enabled -> -> 0 `i `a ]
+"122
+[; ;main.c: 122:                 break;
+[e = _rx_cmd -> -> 0 `i `uc ]
+"123
+[; ;main.c: 123: 
+}
+[e :U 159 ]
+[e :U 158 ]
+[e :U 156 ]
+"124
+[; ;main.c: 124:             case 2:
+[e $U 152  ]
+"126
+[; ;main.c: 126:                     start_time = SysTick_GetMs();
+[e :U 160 ]
+"128
+[; ;main.c: 128:                 }
+[e $ ! || != -> _press_bt1 `i -> 0 `i == -> _rx_cmd `ui -> 70 `ui 161  ]
+{
+"129
+[; ;main.c: 129:                 if (press_bt4 || rx_cmd == 'P') {
+[e = _start_time ( _SysTick_GetMs ..  ]
+"130
+[; ;main.c: 130:                     pot_enabled = !pot_enabled;
+[e = _rx_cmd -> -> 0 `i `uc ]
+"131
+[; ;main.c: 131:                     rx_cmd = 0;
+}
+[e :U 161 ]
+"133
+[; ;main.c: 133:                 if (pot_enabled) {
+[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 162  ]
+{
+"134
+[; ;main.c: 134:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
+[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
+"135
+[; ;main.c: 135:                 }
+[e = _rx_cmd -> -> 0 `i `uc ]
+"136
+[; ;main.c: 136:                 if ((SysTick_GetMs() - start_time) >= 5000) {
+}
+[e :U 162 ]
+"137
+[; ;main.c: 137:                     HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_LOW);
+[e $ ! != -> _pot_enabled `i -> 0 `i 163  ]
+{
+"138
+[; ;main.c: 138:                     HAL_PWM_SetDuty(0);
+[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"139
+[; ;main.c: 139:                     lock_state = 0;
+}
+[e :U 163 ]
+"141
+[; ;main.c: 141:                 break;
+[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 164  ]
+{
+"142
+[; ;main.c: 142: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 0 ]
+"143
+[; ;main.c: 143:             case 3:
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"144
+[; ;main.c: 144:                 if (press_bt3 || rx_cmd == 'S') {
+[e = _lock_state -> -> 0 `i `uc ]
+"145
+[; ;main.c: 145:                     start_time = SysTick_GetMs();
+}
+[e :U 164 ]
+"146
+[; ;main.c: 146:                     rx_cmd = 0;
+[e $U 152  ]
+"148
+[; ;main.c: 148:                 if (press_bt4 || rx_cmd == 'P') {
+[e :U 165 ]
+"149
+[; ;main.c: 149:                     pot_enabled = !pot_enabled;
+[e $ ! || != -> _press_bt2 `i -> 0 `i == -> _rx_cmd `ui -> 66 `ui 166  ]
+{
+"150
+[; ;main.c: 150:                     rx_cmd = 0;
+[e = _start_time ( _SysTick_GetMs ..  ]
+"151
+[; ;main.c: 151:                 }
+[e = _rx_cmd -> -> 0 `i `uc ]
+"152
+[; ;main.c: 152:                 if (pot_enabled) {
+}
+[e :U 166 ]
+"153
+[; ;main.c: 153:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
+[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 167  ]
+{
+"154
+[; ;main.c: 154:                 }
+[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
+"155
+[; ;main.c: 155:                 if ((SysTick_GetMs() - start_time) >= 5000) {
+[e = _rx_cmd -> -> 0 `i `uc ]
+"156
+[; ;main.c: 156:                     HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_LOW);
+}
+[e :U 167 ]
+"157
+[; ;main.c: 157:                     HAL_PWM_SetDuty(0);
+[e $ ! != -> _pot_enabled `i -> 0 `i 168  ]
+{
+"158
+[; ;main.c: 158:                     lock_state = 0;
+[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"159
+[; ;main.c: 159:                 }
+}
+[e :U 168 ]
+"160
+[; ;main.c: 160:                 break;
+[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 169  ]
+{
+"161
+[; ;main.c: 161: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 0 ]
+"162
+[; ;main.c: 162:             default:
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"163
+[; ;main.c: 163:                 lock_state = 0;
+[e = _lock_state -> -> 0 `i `uc ]
+"164
+[; ;main.c: 164:                 break;
+}
+[e :U 169 ]
+"165
+[; ;main.c: 165:         }
+[e $U 152  ]
+"167
+[; ;main.c: 167: 
+[e :U 170 ]
+"168
+[; ;main.c: 168: 
+[e $ ! || != -> _press_bt3 `i -> 0 `i == -> _rx_cmd `ui -> 83 `ui 171  ]
+{
+"169
+[; ;main.c: 169: 
+[e = _start_time ( _SysTick_GetMs ..  ]
+"170
+[; ;main.c: 170: 
+[e = _rx_cmd -> -> 0 `i `uc ]
+"171
+[; ;main.c: 171:         p_bt1 = c_bt1; p_bt2 = c_bt2; p_bt3 = c_bt3; p_bt4 = c_bt4;
+}
+[e :U 171 ]
+"172
+[; ;main.c: 172: 
+[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 172  ]
+{
+"173
+[; ;main.c: 173: 
+[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
+"174
+[; ;main.c: 174:         if ((SysTick_GetMs() - last_uart_time) >= 100) {
+[e = _rx_cmd -> -> 0 `i `uc ]
+"175
+[; ;main.c: 175:             last_uart_time = SysTick_GetMs();
+}
+[e :U 172 ]
+"176
+[; ;main.c: 176: 
+[e $ ! != -> _pot_enabled `i -> 0 `i 173  ]
+{
+"177
+[; ;main.c: 177:             uint16_t adc_val = HAL_ADC_Read(0);
+[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"178
+[; ;main.c: 178:             uint16_t v_int = (adc_val * 5) / 1023;
+}
+[e :U 173 ]
+"179
+[; ;main.c: 179:             uint16_t v_frac = ((adc_val * 500) / 1023) % 100;
+[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 174  ]
+{
+"180
+[; ;main.c: 180: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 0 ]
+"181
+[; ;main.c: 181:             HAL_UART_WriteString("ADC:"); HAL_UART_WriteInt(adc_val);
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"182
+[; ;main.c: 182:             HAL_UART_WriteString(",VOLT:"); HAL_UART_WriteInt(v_int);
+[e = _lock_state -> -> 0 `i `uc ]
+"183
+[; ;main.c: 183:             HAL_UART_WriteString(".");
+}
+[e :U 174 ]
+"184
+[; ;main.c: 184:             if (v_frac < 10) HAL_UART_WriteString("0");
+[e $U 152  ]
+"186
+[; ;main.c: 186: 
+[e :U 175 ]
+"187
+[; ;main.c: 187: 
+[e = _lock_state -> -> 0 `i `uc ]
+"188
+[; ;main.c: 188:             HAL_UART_WriteString(",LED:"); HAL_UART_WriteInt(lock_state);
+[e $U 152  ]
+"189
+[; ;main.c: 189:             HAL_UART_WriteString("\n");
+}
+[e $U 152  ]
+[e :U 153 ]
+[e [\ _lock_state , $ -> 0 `i 154
+ , $ -> 1 `i 160
+ , $ -> 2 `i 165
+ , $ -> 3 `i 170
+ 175 ]
+[e :U 152 ]
+"195
+[; ;main.c: 195: }
+[e = _p_bt1 _c_bt1 ]
+[e = _p_bt2 _c_bt2 ]
+[e = _p_bt3 _c_bt3 ]
+[e = _p_bt4 _c_bt4 ]
+"198
+[e $ ! >= - ( _SysTick_GetMs ..  _last_uart_time -> -> -> 100 `i `l `ul 176  ]
+{
+"199
+[e = _last_uart_time ( _SysTick_GetMs ..  ]
+"201
+[v _adc_val `us ~T0 @X0 1 a ]
+[e = _adc_val ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"202
+[v _v_int `us ~T0 @X0 1 a ]
+[e = _v_int -> / * -> _adc_val `ui -> -> 5 `i `ui -> -> 1023 `i `ui `us ]
+"203
+[v _v_frac `us ~T0 @X0 1 a ]
+[e = _v_frac -> % / * -> _adc_val `ui -> -> 500 `i `ui -> -> 1023 `i `ui -> -> 100 `i `ui `us ]
+"205
+[e ( _HAL_UART_WriteString (1 :s 1C ]
+[e ( _HAL_UART_WriteInt (1 _adc_val ]
+"206
+[e ( _HAL_UART_WriteString (1 :s 2C ]
+[e ( _HAL_UART_WriteInt (1 _v_int ]
+"207
+[e ( _HAL_UART_WriteString (1 :s 3C ]
+"208
+[e $ ! < -> _v_frac `ui -> -> 10 `i `ui 177  ]
+[e ( _HAL_UART_WriteString (1 :s 4C ]
+[e :U 177 ]
+"209
+[e ( _HAL_UART_WriteInt (1 _v_frac ]
+"212
+[e ( _HAL_UART_WriteString (1 :s 5C ]
+[e ( _HAL_UART_WriteInt (1 -> _lock_state `us ]
+"213
+[e ( _HAL_UART_WriteString (1 :s 6C ]
+"214
+}
+[e :U 176 ]
+"217
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
+"218
+}
+[e :U 148 ]
+[e $U 149  ]
+[e :U 150 ]
+"219
+[e :UE 147 ]
+}
+[a 2C 44 86 79 76 84 58 0 ]
+[a 5C 44 76 69 68 58 0 ]
+[a 1C 65 68 67 58 0 ]
+[a 4C 48 0 ]
+[a 3C 46 0 ]
+[a 6C 10 0 ]
