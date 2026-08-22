@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=hal/hal_gpio/hal_gpio.c hal/hal_pwm/hal_pwm.c sys/sys_config/sys_config.c sys/sys_tick/sys_tick.c hal/hal_uart/hal_uart.c hal/hal_adc/hal_adc.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=hal/hal_gpio/hal_gpio.c hal/hal_pwm/hal_pwm.c sys/sys_config/sys_config.c sys/sys_tick/sys_tick.c hal/hal_uart/hal_uart.c hal/hal_adc/hal_adc.c bai3.c hal/hal_timer1/hal_timer1.c app/app_motor/app_motor.c hal/hal_extint/hal_extint.c bai2.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1 ${OBJECTDIR}/hal/hal_pwm/hal_pwm.p1 ${OBJECTDIR}/sys/sys_config/sys_config.p1 ${OBJECTDIR}/sys/sys_tick/sys_tick.p1 ${OBJECTDIR}/hal/hal_uart/hal_uart.p1 ${OBJECTDIR}/hal/hal_adc/hal_adc.p1 ${OBJECTDIR}/main.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1.d ${OBJECTDIR}/hal/hal_pwm/hal_pwm.p1.d ${OBJECTDIR}/sys/sys_config/sys_config.p1.d ${OBJECTDIR}/sys/sys_tick/sys_tick.p1.d ${OBJECTDIR}/hal/hal_uart/hal_uart.p1.d ${OBJECTDIR}/hal/hal_adc/hal_adc.p1.d ${OBJECTDIR}/main.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1 ${OBJECTDIR}/hal/hal_pwm/hal_pwm.p1 ${OBJECTDIR}/sys/sys_config/sys_config.p1 ${OBJECTDIR}/sys/sys_tick/sys_tick.p1 ${OBJECTDIR}/hal/hal_uart/hal_uart.p1 ${OBJECTDIR}/hal/hal_adc/hal_adc.p1 ${OBJECTDIR}/bai3.p1 ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1 ${OBJECTDIR}/app/app_motor/app_motor.p1 ${OBJECTDIR}/hal/hal_extint/hal_extint.p1 ${OBJECTDIR}/bai2.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1.d ${OBJECTDIR}/hal/hal_pwm/hal_pwm.p1.d ${OBJECTDIR}/sys/sys_config/sys_config.p1.d ${OBJECTDIR}/sys/sys_tick/sys_tick.p1.d ${OBJECTDIR}/hal/hal_uart/hal_uart.p1.d ${OBJECTDIR}/hal/hal_adc/hal_adc.p1.d ${OBJECTDIR}/bai3.p1.d ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d ${OBJECTDIR}/app/app_motor/app_motor.p1.d ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d ${OBJECTDIR}/bai2.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1 ${OBJECTDIR}/hal/hal_pwm/hal_pwm.p1 ${OBJECTDIR}/sys/sys_config/sys_config.p1 ${OBJECTDIR}/sys/sys_tick/sys_tick.p1 ${OBJECTDIR}/hal/hal_uart/hal_uart.p1 ${OBJECTDIR}/hal/hal_adc/hal_adc.p1 ${OBJECTDIR}/main.p1
+OBJECTFILES=${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1 ${OBJECTDIR}/hal/hal_pwm/hal_pwm.p1 ${OBJECTDIR}/sys/sys_config/sys_config.p1 ${OBJECTDIR}/sys/sys_tick/sys_tick.p1 ${OBJECTDIR}/hal/hal_uart/hal_uart.p1 ${OBJECTDIR}/hal/hal_adc/hal_adc.p1 ${OBJECTDIR}/bai3.p1 ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1 ${OBJECTDIR}/app/app_motor/app_motor.p1 ${OBJECTDIR}/hal/hal_extint/hal_extint.p1 ${OBJECTDIR}/bai2.p1
 
 # Source Files
-SOURCEFILES=hal/hal_gpio/hal_gpio.c hal/hal_pwm/hal_pwm.c sys/sys_config/sys_config.c sys/sys_tick/sys_tick.c hal/hal_uart/hal_uart.c hal/hal_adc/hal_adc.c main.c
+SOURCEFILES=hal/hal_gpio/hal_gpio.c hal/hal_pwm/hal_pwm.c sys/sys_config/sys_config.c sys/sys_tick/sys_tick.c hal/hal_uart/hal_uart.c hal/hal_adc/hal_adc.c bai3.c hal/hal_timer1/hal_timer1.c app/app_motor/app_motor.c hal/hal_extint/hal_extint.c bai2.c
 
 
 
@@ -136,13 +136,45 @@ ${OBJECTDIR}/hal/hal_adc/hal_adc.p1: hal/hal_adc/hal_adc.c  nbproject/Makefile-$
 	@-${MV} ${OBJECTDIR}/hal/hal_adc/hal_adc.d ${OBJECTDIR}/hal/hal_adc/hal_adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/hal/hal_adc/hal_adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/bai3.p1: bai3.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.p1.d 
-	@${RM} ${OBJECTDIR}/main.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/main.p1 main.c 
-	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/bai3.p1.d 
+	@${RM} ${OBJECTDIR}/bai3.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/bai3.p1 bai3.c 
+	@-${MV} ${OBJECTDIR}/bai3.d ${OBJECTDIR}/bai3.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/bai3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1: hal/hal_timer1/hal_timer1.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/hal/hal_timer1" 
+	@${RM} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d 
+	@${RM} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1 hal/hal_timer1/hal_timer1.c 
+	@-${MV} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.d ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/app/app_motor/app_motor.p1: app/app_motor/app_motor.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/app/app_motor" 
+	@${RM} ${OBJECTDIR}/app/app_motor/app_motor.p1.d 
+	@${RM} ${OBJECTDIR}/app/app_motor/app_motor.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/app/app_motor/app_motor.p1 app/app_motor/app_motor.c 
+	@-${MV} ${OBJECTDIR}/app/app_motor/app_motor.d ${OBJECTDIR}/app/app_motor/app_motor.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/app/app_motor/app_motor.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/hal/hal_extint/hal_extint.p1: hal/hal_extint/hal_extint.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/hal/hal_extint" 
+	@${RM} ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d 
+	@${RM} ${OBJECTDIR}/hal/hal_extint/hal_extint.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/hal/hal_extint/hal_extint.p1 hal/hal_extint/hal_extint.c 
+	@-${MV} ${OBJECTDIR}/hal/hal_extint/hal_extint.d ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/bai2.p1: bai2.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/bai2.p1.d 
+	@${RM} ${OBJECTDIR}/bai2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/bai2.p1 bai2.c 
+	@-${MV} ${OBJECTDIR}/bai2.d ${OBJECTDIR}/bai2.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/bai2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/hal/hal_gpio/hal_gpio.p1: hal/hal_gpio/hal_gpio.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -193,13 +225,45 @@ ${OBJECTDIR}/hal/hal_adc/hal_adc.p1: hal/hal_adc/hal_adc.c  nbproject/Makefile-$
 	@-${MV} ${OBJECTDIR}/hal/hal_adc/hal_adc.d ${OBJECTDIR}/hal/hal_adc/hal_adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/hal/hal_adc/hal_adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/bai3.p1: bai3.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.p1.d 
-	@${RM} ${OBJECTDIR}/main.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/main.p1 main.c 
-	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/bai3.p1.d 
+	@${RM} ${OBJECTDIR}/bai3.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/bai3.p1 bai3.c 
+	@-${MV} ${OBJECTDIR}/bai3.d ${OBJECTDIR}/bai3.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/bai3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1: hal/hal_timer1/hal_timer1.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/hal/hal_timer1" 
+	@${RM} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d 
+	@${RM} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1 hal/hal_timer1/hal_timer1.c 
+	@-${MV} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.d ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/hal/hal_timer1/hal_timer1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/app/app_motor/app_motor.p1: app/app_motor/app_motor.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/app/app_motor" 
+	@${RM} ${OBJECTDIR}/app/app_motor/app_motor.p1.d 
+	@${RM} ${OBJECTDIR}/app/app_motor/app_motor.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/app/app_motor/app_motor.p1 app/app_motor/app_motor.c 
+	@-${MV} ${OBJECTDIR}/app/app_motor/app_motor.d ${OBJECTDIR}/app/app_motor/app_motor.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/app/app_motor/app_motor.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/hal/hal_extint/hal_extint.p1: hal/hal_extint/hal_extint.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/hal/hal_extint" 
+	@${RM} ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d 
+	@${RM} ${OBJECTDIR}/hal/hal_extint/hal_extint.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/hal/hal_extint/hal_extint.p1 hal/hal_extint/hal_extint.c 
+	@-${MV} ${OBJECTDIR}/hal/hal_extint/hal_extint.d ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/hal/hal_extint/hal_extint.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/bai2.p1: bai2.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/bai2.p1.d 
+	@${RM} ${OBJECTDIR}/bai2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/bai2.p1 bai2.c 
+	@-${MV} ${OBJECTDIR}/bai2.d ${OBJECTDIR}/bai2.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/bai2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

@@ -41,32 +41,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "553
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
 [v _PIR1bits `VS22 ~T0 @X0 0 e@12 ]
-"1140
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
-[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
-"1044
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1044:     struct {
-[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S41 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"1054
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1054:     struct {
-[s S42 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
-[n S42 . RCD8 . RC9 ]
-"1059
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1059:     struct {
-[s S43 :6 `uc 1 :1 `uc 1 ]
-[n S43 . . nRC8 ]
-"1063
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1063:     struct {
-[s S44 :6 `uc 1 :1 `uc 1 ]
-[n S44 . . RC8_9 ]
-"1043
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1043: typedef union {
-[u S40 `S41 1 `S42 1 `S43 1 `S44 1 ]
-[n S40 . . . . . ]
-"1068
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1068: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
-[v _RCSTAbits `VS40 ~T0 @X0 0 e@24 ]
+"9 ./hal/hal_uart/hal_uart.h
+[; ;./hal/hal_uart/hal_uart.h: 9: char HAL_UART_ReadChar(void);
+[v _HAL_UART_ReadChar `(uc ~T0 @X0 0 ef ]
 [p mainexit ]
 "3 ./sys/sys_config/sys_config.h
 [; ;./sys/sys_config/sys_config.h: 3: void sys_config(void);
@@ -83,8 +60,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5 ./sys/sys_tick/sys_tick.h
 [; ;./sys/sys_tick/sys_tick.h: 5: void SysTick_Init(void);
 [v _SysTick_Init `(v ~T0 @X0 0 ef ]
-"73 main.c
-[; ;main.c: 73: 
+"65 bai2.c
+[; ;bai2.c: 65:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_HIGH);
 [c E1424 0 1 2 3 4 .. ]
 [n E1424 . PORT_A PORT_B PORT_C PORT_D PORT_E  ]
 [c E1431 0 1 2 3 4 5 6 7 .. ]
@@ -350,149 +327,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"13 main.c
-[; ;main.c: 13:     if (PIE1bits.RCIE && PIR1bits.RCIF) {
+"13 bai2.c
+[; ;bai2.c: 13:     char temp_rx = HAL_UART_ReadChar();
 [p x FOSC  =  HS ]
 "14
-[; ;main.c: 14:         char temp_rx = RCREG;
+[; ;bai2.c: 14: 
 [p x WDTE  =  OFF ]
 "15
-[; ;main.c: 15: 
+[; ;bai2.c: 15: 
 [p x PWRTE  =  ON ]
 "16
-[; ;main.c: 16: 
+[; ;bai2.c: 16:     if (temp_rx != '\n' && temp_rx != '\r') {
 [p x MCLRE  =  ON ]
 "17
-[; ;main.c: 17:         if (temp_rx != '\n' && temp_rx != '\r') {
+[; ;bai2.c: 17:        rx_cmd = temp_rx;
 [p x CP  =  OFF ]
 "18
-[; ;main.c: 18:             rx_cmd = temp_rx;
+[; ;bai2.c: 18:     }
 [p x CPD  =  OFF ]
 "19
-[; ;main.c: 19:         }
+[; ;bai2.c: 19:  }
 [p x BOREN  =  ON ]
 "20
-[; ;main.c: 20:         if (RCSTAbits.OERR) {
+[; ;bai2.c: 20: }
 [p x IESO  =  OFF ]
 "21
-[; ;main.c: 21:             RCSTAbits.CREN = 0;
+[; ;bai2.c: 21: 
 [p x FCMEN  =  OFF ]
 "22
-[; ;main.c: 22:             RCSTAbits.CREN = 1;
+[; ;bai2.c: 22: int main(void) {
 [p x LVP  =  OFF ]
 "26
-[; ;main.c: 26: 
+[; ;bai2.c: 26:     HAL_UART_Init(9600);
 [v _rx_cmd `Vuc ~T0 @X0 1 e ]
 [i _rx_cmd
 -> -> 0 `i `uc
 ]
 [v $root$_ISR `(v ~T0 @X0 0 e ]
 "29
-[; ;main.c: 29:     HAL_PWM_Init();
+[; ;bai2.c: 29:     PIE1bits.RCIE = 1;
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
 "31
-[; ;main.c: 31:     HAL_UART_Init(9600);
+[; ;bai2.c: 31:     INTCONbits.GIE = 1;
 [e $ ! && != -> . . _INTCONbits 0 5 `i -> 0 `i != -> . . _INTCONbits 0 2 `i -> 0 `i 143  ]
 {
 "32
-[; ;main.c: 32:     SysTick_Init();
+[; ;bai2.c: 32: 
 [e ( _SysTick_Update ..  ]
 "33
-[; ;main.c: 33: 
+[; ;bai2.c: 33:     uint8_t lock_state = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "34
-[; ;main.c: 34: 
+[; ;bai2.c: 34:     uint32_t start_time = 0;
 }
 [e :U 143 ]
-"37
-[; ;main.c: 37:     INTCONbits.GIE = 1;
+"36
+[; ;bai2.c: 36: 
 [e $ ! && != -> . . _PIE1bits 0 5 `i -> 0 `i != -> . . _PIR1bits 0 5 `i -> 0 `i 144  ]
 {
-"38
-[; ;main.c: 38: 
+"37
+[; ;bai2.c: 37:     _Bool p_bt1 = 1, p_bt2 = 1, p_bt3 = 1, p_bt4 = 1;
 [v _temp_rx `uc ~T0 @X0 1 a ]
-[e = _temp_rx -> _RCREG `uc ]
-"41
-[; ;main.c: 41:     _Bool pot_enabled = 0;
+[e = _temp_rx ( _HAL_UART_ReadChar ..  ]
+"40
+[; ;bai2.c: 40:     while(1) {
 [e $ ! && != -> _temp_rx `ui -> 10 `ui != -> _temp_rx `ui -> 13 `ui 145  ]
 {
-"42
-[; ;main.c: 42: 
+"41
+[; ;bai2.c: 41:         _Bool c_bt1 = (HAL_GPIO_ReadPin(PORT_B, PIN_3) == GPIO_LOW);
 [e = _rx_cmd _temp_rx ]
-"43
-[; ;main.c: 43: 
+"42
+[; ;bai2.c: 42:         _Bool c_bt2 = (HAL_GPIO_ReadPin(PORT_B, PIN_4) == GPIO_LOW);
 }
 [e :U 145 ]
-"44
-[; ;main.c: 44:     _Bool p_bt1 = 1, p_bt2 = 1, p_bt3 = 1, p_bt4 = 1;
-[e $ ! != -> . . _RCSTAbits 0 1 `i -> 0 `i 146  ]
-{
-"45
-[; ;main.c: 45:     uint32_t last_uart_time = 0;
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-"46
-[; ;main.c: 46: 
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"47
-[; ;main.c: 47:     while(1) {
-}
-[e :U 146 ]
-"48
-[; ;main.c: 48: 
+"43
+[; ;bai2.c: 43:         _Bool c_bt3 = (HAL_GPIO_ReadPin(PORT_B, PIN_5) == GPIO_LOW);
 }
 [e :U 144 ]
-"49
-[; ;main.c: 49:         _Bool c_bt1 = (HAL_GPIO_ReadPin(PORT_B, PIN_3) == GPIO_LOW);
+"44
+[; ;bai2.c: 44:         _Bool c_bt4 = (HAL_GPIO_ReadPin(PORT_B, PIN_2) == GPIO_LOW);
 [e :UE 142 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"51
-[; ;main.c: 51:         _Bool c_bt3 = (HAL_GPIO_ReadPin(PORT_B, PIN_5) == GPIO_LOW);
+"46
+[; ;bai2.c: 46:         _Bool press_bt2 = (c_bt2 && !p_bt2);
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"52
-[; ;main.c: 52:         _Bool c_bt4 = (HAL_GPIO_ReadPin(PORT_B, PIN_2) == GPIO_LOW);
+"47
+[; ;bai2.c: 47:         _Bool press_bt3 = (c_bt3 && !p_bt3);
 [e ( _sys_config ..  ]
-"53
-[; ;main.c: 53: 
+"48
+[; ;bai2.c: 48:         _Bool press_bt4 = (c_bt4 && !p_bt4);
 [e ( _HAL_PWM_Init ..  ]
-"54
-[; ;main.c: 54: 
+"49
+[; ;bai2.c: 49: 
 [e ( _HAL_ADC_Init ..  ]
-"55
-[; ;main.c: 55:         _Bool press_bt1 = (c_bt1 && !p_bt1);
+"50
+[; ;bai2.c: 50:         if (rx_cmd == 'R') {
 [e ( _HAL_UART_Init (1 -> -> -> 9600 `i `l `ul ]
-"56
-[; ;main.c: 56:         _Bool press_bt2 = (c_bt2 && !p_bt2);
+"51
+[; ;bai2.c: 51:             lock_state = 0;
 [e ( _SysTick_Init ..  ]
-"59
-[; ;main.c: 59: 
+"53
+[; ;bai2.c: 53:             HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_LOW);
 [e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"60
-[; ;main.c: 60: 
+"54
+[; ;bai2.c: 54:             HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_LOW);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"61
-[; ;main.c: 61:         if (rx_cmd == 'R') {
+"55
+[; ;bai2.c: 55:             HAL_PWM_SetDuty(0);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"63
-[; ;main.c: 63:             HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_LOW);
+"57
+[; ;bai2.c: 57:             rx_cmd = 0;
 [v _lock_state `uc ~T0 @X0 1 a ]
 [e = _lock_state -> -> 0 `i `uc ]
-"64
-[; ;main.c: 64:             HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_LOW);
+"58
+[; ;bai2.c: 58:         }
 [v _start_time `ul ~T0 @X0 1 a ]
 [e = _start_time -> -> -> 0 `i `l `ul ]
-"65
-[; ;main.c: 65:             HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_LOW);
+"59
+[; ;bai2.c: 59: 
 [v _pot_enabled `a ~T0 @X0 1 a ]
 [e = _pot_enabled -> -> 0 `i `a ]
-"68
-[; ;main.c: 68:             rx_cmd = 0;
+"61
+[; ;bai2.c: 61:             case 0:
 [v _p_bt1 `a ~T0 @X0 1 a ]
 [e = _p_bt1 -> -> 1 `i `a ]
 [v _p_bt2 `a ~T0 @X0 1 a ]
@@ -501,424 +464,423 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _p_bt3 -> -> 1 `i `a ]
 [v _p_bt4 `a ~T0 @X0 1 a ]
 [e = _p_bt4 -> -> 1 `i `a ]
-"69
-[; ;main.c: 69:         }
+"62
+[; ;bai2.c: 62:                 if (press_bt1 || rx_cmd == 'F') {
 [v _last_uart_time `ul ~T0 @X0 1 a ]
 [e = _last_uart_time -> -> -> 0 `i `l `ul ]
-"71
-[; ;main.c: 71: 
-[e :U 149 ]
+"64
+[; ;bai2.c: 64:                     start_time = SysTick_GetMs();
+[e :U 148 ]
 {
-"73
-[; ;main.c: 73: 
+"65
+[; ;bai2.c: 65:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_HIGH);
 [v _c_bt1 `a ~T0 @X0 1 a ]
 [e = _c_bt1 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 3 `ui -> . `E1445 0 `ui `i `a ]
-"74
-[; ;main.c: 74:         switch(lock_state) {
+"66
+[; ;bai2.c: 66:                     HAL_PWM_SetDuty(1023);
 [v _c_bt2 `a ~T0 @X0 1 a ]
 [e = _c_bt2 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 4 `ui -> . `E1445 0 `ui `i `a ]
-"75
-[; ;main.c: 75:             case 0:
+"67
+[; ;bai2.c: 67:                     pot_enabled = 0;
 [v _c_bt3 `a ~T0 @X0 1 a ]
 [e = _c_bt3 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 5 `ui -> . `E1445 0 `ui `i `a ]
-"76
-[; ;main.c: 76:                 if (press_bt1 || rx_cmd == 'F') {
+"68
+[; ;bai2.c: 68:                     rx_cmd = 0;
 [v _c_bt4 `a ~T0 @X0 1 a ]
 [e = _c_bt4 -> -> == -> ( _HAL_GPIO_ReadPin (2 , . `E1424 1 . `E1431 2 `ui -> . `E1445 0 `ui `i `a ]
-"79
-[; ;main.c: 79:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_HIGH);
+"69
+[; ;bai2.c: 69:                 }
 [v _press_bt1 `a ~T0 @X0 1 a ]
 [e = _press_bt1 -> -> && != -> _c_bt1 `i -> 0 `i ! != -> _p_bt1 `i -> 0 `i `i `a ]
-"80
-[; ;main.c: 80:                     HAL_PWM_SetDuty(1023);
+"70
+[; ;bai2.c: 70:                 else if (press_bt2 || rx_cmd == 'B') {
 [v _press_bt2 `a ~T0 @X0 1 a ]
 [e = _press_bt2 -> -> && != -> _c_bt2 `i -> 0 `i ! != -> _p_bt2 `i -> 0 `i `i `a ]
-"81
-[; ;main.c: 81:                     pot_enabled = 0;
+"71
+[; ;bai2.c: 71:                     lock_state = 2;
 [v _press_bt3 `a ~T0 @X0 1 a ]
 [e = _press_bt3 -> -> && != -> _c_bt3 `i -> 0 `i ! != -> _p_bt3 `i -> 0 `i `i `a ]
-"82
-[; ;main.c: 82:                     rx_cmd = 0;
+"72
+[; ;bai2.c: 72:                     start_time = SysTick_GetMs();
 [v _press_bt4 `a ~T0 @X0 1 a ]
 [e = _press_bt4 -> -> && != -> _c_bt4 `i -> 0 `i ! != -> _p_bt4 `i -> 0 `i `i `a ]
-"85
-[; ;main.c: 85:                     lock_state = 2;
-[e $ ! == -> _rx_cmd `ui -> 82 `ui 151  ]
+"74
+[; ;bai2.c: 74:                     HAL_PWM_SetDuty(1023);
+[e $ ! == -> _rx_cmd `ui -> 82 `ui 150  ]
 {
-"86
-[; ;main.c: 86:                     start_time = SysTick_GetMs();
+"75
+[; ;bai2.c: 75:                     pot_enabled = 0;
 [e = _lock_state -> -> 0 `i `uc ]
-"87
-[; ;main.c: 87:                     HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_HIGH);
+"76
+[; ;bai2.c: 76:                     rx_cmd = 0;
 [e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 0 ]
-"88
-[; ;main.c: 88:                     HAL_PWM_SetDuty(1023);
+"77
+[; ;bai2.c: 77:                 }
 [e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 0 ]
-"89
-[; ;main.c: 89:                     pot_enabled = 0;
+"78
+[; ;bai2.c: 78:                 else if (press_bt3 || rx_cmd == 'S') {
 [e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 0 ]
-"90
-[; ;main.c: 90:                     rx_cmd = 0;
+"79
+[; ;bai2.c: 79:                     lock_state = 3;
 [e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"80
+[; ;bai2.c: 80:                     start_time = SysTick_GetMs();
+[e = _pot_enabled -> -> 0 `i `a ]
+"81
+[; ;bai2.c: 81:                     HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_HIGH);
+[e = _rx_cmd -> -> 0 `i `uc ]
+"82
+[; ;bai2.c: 82:                     HAL_PWM_SetDuty(1023);
+}
+[e :U 150 ]
+"84
+[; ;bai2.c: 84:                     rx_cmd = 0;
+[e $U 152  ]
+{
+"85
+[; ;bai2.c: 85:                 }
+[e :U 153 ]
+"86
+[; ;bai2.c: 86:                 break;
+[e $ ! || != -> _press_bt1 `i -> 0 `i == -> _rx_cmd `ui -> 70 `ui 154  ]
+{
+"87
+[; ;bai2.c: 87: 
+[e = _lock_state -> -> 1 `i `uc ]
+"88
+[; ;bai2.c: 88:             case 1:
+[e = _start_time ( _SysTick_GetMs ..  ]
+"89
+[; ;bai2.c: 89: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 1 ]
+"90
+[; ;bai2.c: 90:                 if (press_bt1 || rx_cmd == 'F') {
+[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
 "91
-[; ;main.c: 91:                 }
+[; ;bai2.c: 91:                     start_time = SysTick_GetMs();
 [e = _pot_enabled -> -> 0 `i `a ]
 "92
-[; ;main.c: 92:                 else if (press_bt3 || rx_cmd == 'S') {
+[; ;bai2.c: 92:                     rx_cmd = 0;
 [e = _rx_cmd -> -> 0 `i `uc ]
 "93
-[; ;main.c: 93:                     lock_state = 3;
+[; ;bai2.c: 93:                 }
 }
-[e :U 151 ]
-"98
-[; ;main.c: 98:                     rx_cmd = 0;
-[e $U 153  ]
-{
-"99
-[; ;main.c: 99:                 }
+[e $U 155  ]
+"94
+[; ;bai2.c: 94: 
 [e :U 154 ]
-"100
-[; ;main.c: 100:                 break;
-[e $ ! || != -> _press_bt1 `i -> 0 `i == -> _rx_cmd `ui -> 70 `ui 155  ]
+[e $ ! || != -> _press_bt2 `i -> 0 `i == -> _rx_cmd `ui -> 66 `ui 156  ]
 {
-"101
-[; ;main.c: 101: 
-[e = _lock_state -> -> 1 `i `uc ]
-"102
-[; ;main.c: 102:             case 1:
-[e = _start_time ( _SysTick_GetMs ..  ]
-"103
-[; ;main.c: 103: 
-[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 1 ]
-"104
-[; ;main.c: 104:                 if (press_bt1 || rx_cmd == 'F') {
-[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
-"105
-[; ;main.c: 105:                     start_time = SysTick_GetMs();
-[e = _pot_enabled -> -> 0 `i `a ]
-"106
-[; ;main.c: 106:                     rx_cmd = 0;
-[e = _rx_cmd -> -> 0 `i `uc ]
-"107
-[; ;main.c: 107:                 }
-}
-[e $U 156  ]
-"108
-[; ;main.c: 108: 
-[e :U 155 ]
-[e $ ! || != -> _press_bt2 `i -> 0 `i == -> _rx_cmd `ui -> 66 `ui 157  ]
-{
-"109
-[; ;main.c: 109:                 if (press_bt4 || rx_cmd == 'P') {
+"95
+[; ;bai2.c: 95:                 if (press_bt4 || rx_cmd == 'P') {
 [e = _lock_state -> -> 2 `i `uc ]
-"110
-[; ;main.c: 110:                     pot_enabled = !pot_enabled;
+"96
+[; ;bai2.c: 96:                     pot_enabled = !pot_enabled;
 [e = _start_time ( _SysTick_GetMs ..  ]
-"111
-[; ;main.c: 111:                     rx_cmd = 0;
+"97
+[; ;bai2.c: 97:                     rx_cmd = 0;
 [e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 1 ]
-"112
-[; ;main.c: 112:                 }
+"98
+[; ;bai2.c: 98:                 }
 [e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
-"113
-[; ;main.c: 113:                 if (pot_enabled) {
+"99
+[; ;bai2.c: 99:                 if (pot_enabled) {
 [e = _pot_enabled -> -> 0 `i `a ]
-"114
-[; ;main.c: 114:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
+"100
+[; ;bai2.c: 100:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
 [e = _rx_cmd -> -> 0 `i `uc ]
-"115
-[; ;main.c: 115:                 }
+"101
+[; ;bai2.c: 101:                 }
 }
-[e $U 158  ]
-"116
-[; ;main.c: 116: 
-[e :U 157 ]
-[e $ ! || != -> _press_bt3 `i -> 0 `i == -> _rx_cmd `ui -> 83 `ui 159  ]
-{
-"117
-[; ;main.c: 117:                 if ((SysTick_GetMs() - start_time) >= 5000) {
-[e = _lock_state -> -> 3 `i `uc ]
-"118
-[; ;main.c: 118:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_LOW);
-[e = _start_time ( _SysTick_GetMs ..  ]
-"119
-[; ;main.c: 119:                     HAL_PWM_SetDuty(0);
-[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 1 ]
-"120
-[; ;main.c: 120:                     lock_state = 0;
-[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
-"121
-[; ;main.c: 121:                 }
-[e = _pot_enabled -> -> 0 `i `a ]
-"122
-[; ;main.c: 122:                 break;
-[e = _rx_cmd -> -> 0 `i `uc ]
-"123
-[; ;main.c: 123: 
-}
-[e :U 159 ]
-[e :U 158 ]
+[e $U 157  ]
+"102
+[; ;bai2.c: 102: 
 [e :U 156 ]
-"124
-[; ;main.c: 124:             case 2:
-[e $U 152  ]
-"126
-[; ;main.c: 126:                     start_time = SysTick_GetMs();
-[e :U 160 ]
-"128
-[; ;main.c: 128:                 }
-[e $ ! || != -> _press_bt1 `i -> 0 `i == -> _rx_cmd `ui -> 70 `ui 161  ]
+[e $ ! || != -> _press_bt3 `i -> 0 `i == -> _rx_cmd `ui -> 83 `ui 158  ]
 {
-"129
-[; ;main.c: 129:                 if (press_bt4 || rx_cmd == 'P') {
+"103
+[; ;bai2.c: 103:                 if ((SysTick_GetMs() - start_time) >= 5000) {
+[e = _lock_state -> -> 3 `i `uc ]
+"104
+[; ;bai2.c: 104:                     HAL_GPIO_WritePin(PORT_D, PIN_4, GPIO_LOW);
 [e = _start_time ( _SysTick_GetMs ..  ]
-"130
-[; ;main.c: 130:                     pot_enabled = !pot_enabled;
+"105
+[; ;bai2.c: 105:                     HAL_PWM_SetDuty(0);
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 1 ]
+"106
+[; ;bai2.c: 106:                     lock_state = 0;
+[e ( _HAL_PWM_SetDuty (1 -> -> 1023 `i `us ]
+"107
+[; ;bai2.c: 107:                 }
+[e = _pot_enabled -> -> 0 `i `a ]
+"108
+[; ;bai2.c: 108:                 break;
 [e = _rx_cmd -> -> 0 `i `uc ]
-"131
-[; ;main.c: 131:                     rx_cmd = 0;
+"109
+[; ;bai2.c: 109: 
+}
+[e :U 158 ]
+[e :U 157 ]
+[e :U 155 ]
+"110
+[; ;bai2.c: 110:             case 2:
+[e $U 151  ]
+"112
+[; ;bai2.c: 112:                     start_time = SysTick_GetMs();
+[e :U 159 ]
+"114
+[; ;bai2.c: 114:                 }
+[e $ ! || != -> _press_bt1 `i -> 0 `i == -> _rx_cmd `ui -> 70 `ui 160  ]
+{
+"115
+[; ;bai2.c: 115:                 if (press_bt4 || rx_cmd == 'P') {
+[e = _start_time ( _SysTick_GetMs ..  ]
+"116
+[; ;bai2.c: 116:                     pot_enabled = !pot_enabled;
+[e = _rx_cmd -> -> 0 `i `uc ]
+"117
+[; ;bai2.c: 117:                     rx_cmd = 0;
+}
+[e :U 160 ]
+"119
+[; ;bai2.c: 119:                 if (pot_enabled) {
+[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 161  ]
+{
+"120
+[; ;bai2.c: 120:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
+[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
+"121
+[; ;bai2.c: 121:                 }
+[e = _rx_cmd -> -> 0 `i `uc ]
+"122
+[; ;bai2.c: 122:                 if ((SysTick_GetMs() - start_time) >= 5000) {
 }
 [e :U 161 ]
-"133
-[; ;main.c: 133:                 if (pot_enabled) {
-[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 162  ]
+"123
+[; ;bai2.c: 123:                     HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_LOW);
+[e $ ! != -> _pot_enabled `i -> 0 `i 162  ]
 {
-"134
-[; ;main.c: 134:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
-[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
-"135
-[; ;main.c: 135:                 }
-[e = _rx_cmd -> -> 0 `i `uc ]
-"136
-[; ;main.c: 136:                 if ((SysTick_GetMs() - start_time) >= 5000) {
+"124
+[; ;bai2.c: 124:                     HAL_PWM_SetDuty(0);
+[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"125
+[; ;bai2.c: 125:                     lock_state = 0;
 }
 [e :U 162 ]
-"137
-[; ;main.c: 137:                     HAL_GPIO_WritePin(PORT_D, PIN_5, GPIO_LOW);
-[e $ ! != -> _pot_enabled `i -> 0 `i 163  ]
+"127
+[; ;bai2.c: 127:                 break;
+[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 163  ]
 {
-"138
-[; ;main.c: 138:                     HAL_PWM_SetDuty(0);
-[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
-"139
-[; ;main.c: 139:                     lock_state = 0;
+"128
+[; ;bai2.c: 128: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 0 ]
+"129
+[; ;bai2.c: 129:             case 3:
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"130
+[; ;bai2.c: 130:                 if (press_bt3 || rx_cmd == 'S') {
+[e = _lock_state -> -> 0 `i `uc ]
+"131
+[; ;bai2.c: 131:                     start_time = SysTick_GetMs();
 }
 [e :U 163 ]
-"141
-[; ;main.c: 141:                 break;
-[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 164  ]
-{
-"142
-[; ;main.c: 142: 
-[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 4 . `E1445 0 ]
-"143
-[; ;main.c: 143:             case 3:
-[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
-"144
-[; ;main.c: 144:                 if (press_bt3 || rx_cmd == 'S') {
-[e = _lock_state -> -> 0 `i `uc ]
-"145
-[; ;main.c: 145:                     start_time = SysTick_GetMs();
-}
+"132
+[; ;bai2.c: 132:                     rx_cmd = 0;
+[e $U 151  ]
+"134
+[; ;bai2.c: 134:                 if (press_bt4 || rx_cmd == 'P') {
 [e :U 164 ]
-"146
-[; ;main.c: 146:                     rx_cmd = 0;
-[e $U 152  ]
-"148
-[; ;main.c: 148:                 if (press_bt4 || rx_cmd == 'P') {
-[e :U 165 ]
-"149
-[; ;main.c: 149:                     pot_enabled = !pot_enabled;
-[e $ ! || != -> _press_bt2 `i -> 0 `i == -> _rx_cmd `ui -> 66 `ui 166  ]
+"135
+[; ;bai2.c: 135:                     pot_enabled = !pot_enabled;
+[e $ ! || != -> _press_bt2 `i -> 0 `i == -> _rx_cmd `ui -> 66 `ui 165  ]
 {
-"150
-[; ;main.c: 150:                     rx_cmd = 0;
+"136
+[; ;bai2.c: 136:                     rx_cmd = 0;
 [e = _start_time ( _SysTick_GetMs ..  ]
-"151
-[; ;main.c: 151:                 }
+"137
+[; ;bai2.c: 137:                 }
 [e = _rx_cmd -> -> 0 `i `uc ]
-"152
-[; ;main.c: 152:                 if (pot_enabled) {
+"138
+[; ;bai2.c: 138:                 if (pot_enabled) {
+}
+[e :U 165 ]
+"139
+[; ;bai2.c: 139:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
+[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 166  ]
+{
+"140
+[; ;bai2.c: 140:                 }
+[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
+"141
+[; ;bai2.c: 141:                 if ((SysTick_GetMs() - start_time) >= 5000) {
+[e = _rx_cmd -> -> 0 `i `uc ]
+"142
+[; ;bai2.c: 142:                     HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_LOW);
 }
 [e :U 166 ]
-"153
-[; ;main.c: 153:                     HAL_PWM_SetDuty(HAL_ADC_Read(0));
-[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 167  ]
+"143
+[; ;bai2.c: 143:                     HAL_PWM_SetDuty(0);
+[e $ ! != -> _pot_enabled `i -> 0 `i 167  ]
 {
-"154
-[; ;main.c: 154:                 }
-[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
-"155
-[; ;main.c: 155:                 if ((SysTick_GetMs() - start_time) >= 5000) {
-[e = _rx_cmd -> -> 0 `i `uc ]
-"156
-[; ;main.c: 156:                     HAL_GPIO_WritePin(PORT_D, PIN_6, GPIO_LOW);
+"144
+[; ;bai2.c: 144:                     lock_state = 0;
+[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"145
+[; ;bai2.c: 145:                 }
 }
 [e :U 167 ]
-"157
-[; ;main.c: 157:                     HAL_PWM_SetDuty(0);
-[e $ ! != -> _pot_enabled `i -> 0 `i 168  ]
+"146
+[; ;bai2.c: 146:                 break;
+[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 168  ]
 {
-"158
-[; ;main.c: 158:                     lock_state = 0;
-[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
-"159
-[; ;main.c: 159:                 }
+"147
+[; ;bai2.c: 147: 
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 0 ]
+"148
+[; ;bai2.c: 148:             default:
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"149
+[; ;bai2.c: 149:                 lock_state = 0;
+[e = _lock_state -> -> 0 `i `uc ]
+"150
+[; ;bai2.c: 150:                 break;
 }
 [e :U 168 ]
-"160
-[; ;main.c: 160:                 break;
-[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 169  ]
-{
-"161
-[; ;main.c: 161: 
-[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 5 . `E1445 0 ]
-"162
-[; ;main.c: 162:             default:
-[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
-"163
-[; ;main.c: 163:                 lock_state = 0;
-[e = _lock_state -> -> 0 `i `uc ]
-"164
-[; ;main.c: 164:                 break;
-}
+"151
+[; ;bai2.c: 151:         }
+[e $U 151  ]
+"153
+[; ;bai2.c: 153: 
 [e :U 169 ]
-"165
-[; ;main.c: 165:         }
-[e $U 152  ]
-"167
-[; ;main.c: 167: 
-[e :U 170 ]
-"168
-[; ;main.c: 168: 
-[e $ ! || != -> _press_bt3 `i -> 0 `i == -> _rx_cmd `ui -> 83 `ui 171  ]
+"154
+[; ;bai2.c: 154:         p_bt1 = c_bt1; p_bt2 = c_bt2; p_bt3 = c_bt3; p_bt4 = c_bt4;
+[e $ ! || != -> _press_bt3 `i -> 0 `i == -> _rx_cmd `ui -> 83 `ui 170  ]
 {
-"169
-[; ;main.c: 169: 
+"155
+[; ;bai2.c: 155: 
 [e = _start_time ( _SysTick_GetMs ..  ]
-"170
-[; ;main.c: 170: 
+"156
+[; ;bai2.c: 156: 
 [e = _rx_cmd -> -> 0 `i `uc ]
-"171
-[; ;main.c: 171:         p_bt1 = c_bt1; p_bt2 = c_bt2; p_bt3 = c_bt3; p_bt4 = c_bt4;
+"157
+[; ;bai2.c: 157:         if ((SysTick_GetMs() - last_uart_time) >= 100) {
+}
+[e :U 170 ]
+"158
+[; ;bai2.c: 158:             last_uart_time = SysTick_GetMs();
+[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 171  ]
+{
+"159
+[; ;bai2.c: 159: 
+[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
+"160
+[; ;bai2.c: 160:             uint16_t adc_val = HAL_ADC_Read(0);
+[e = _rx_cmd -> -> 0 `i `uc ]
+"161
+[; ;bai2.c: 161:             uint16_t v_int = (adc_val * 5) / 1023;
 }
 [e :U 171 ]
-"172
-[; ;main.c: 172: 
-[e $ ! || != -> _press_bt4 `i -> 0 `i == -> _rx_cmd `ui -> 80 `ui 172  ]
+"162
+[; ;bai2.c: 162:             uint16_t v_frac = ((adc_val * 500) / 1023) % 100;
+[e $ ! != -> _pot_enabled `i -> 0 `i 172  ]
 {
-"173
-[; ;main.c: 173: 
-[e = _pot_enabled -> -> ! != -> _pot_enabled `i -> 0 `i `i `a ]
-"174
-[; ;main.c: 174:         if ((SysTick_GetMs() - last_uart_time) >= 100) {
-[e = _rx_cmd -> -> 0 `i `uc ]
-"175
-[; ;main.c: 175:             last_uart_time = SysTick_GetMs();
+"163
+[; ;bai2.c: 163: 
+[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
+"164
+[; ;bai2.c: 164:             HAL_UART_WriteString("ADC:"); HAL_UART_WriteInt(adc_val);
 }
 [e :U 172 ]
-"176
-[; ;main.c: 176: 
-[e $ ! != -> _pot_enabled `i -> 0 `i 173  ]
+"165
+[; ;bai2.c: 165:             HAL_UART_WriteString(",VOLT:"); HAL_UART_WriteInt(v_int);
+[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 173  ]
 {
-"177
-[; ;main.c: 177:             uint16_t adc_val = HAL_ADC_Read(0);
-[e ( _HAL_PWM_SetDuty (1 ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
-"178
-[; ;main.c: 178:             uint16_t v_int = (adc_val * 5) / 1023;
+"166
+[; ;bai2.c: 166:             HAL_UART_WriteString(".");
+[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 0 ]
+"167
+[; ;bai2.c: 167:             if (v_frac < 10) HAL_UART_WriteString("0");
+[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
+"168
+[; ;bai2.c: 168:             HAL_UART_WriteInt(v_frac);
+[e = _lock_state -> -> 0 `i `uc ]
+"169
+[; ;bai2.c: 169: 
 }
 [e :U 173 ]
-"179
-[; ;main.c: 179:             uint16_t v_frac = ((adc_val * 500) / 1023) % 100;
-[e $ ! >= - ( _SysTick_GetMs ..  _start_time -> -> -> 5000 `i `l `ul 174  ]
-{
-"180
-[; ;main.c: 180: 
-[e ( _HAL_GPIO_WritePin (3 , , . `E1424 3 . `E1431 6 . `E1445 0 ]
-"181
-[; ;main.c: 181:             HAL_UART_WriteString("ADC:"); HAL_UART_WriteInt(adc_val);
-[e ( _HAL_PWM_SetDuty (1 -> -> 0 `i `us ]
-"182
-[; ;main.c: 182:             HAL_UART_WriteString(",VOLT:"); HAL_UART_WriteInt(v_int);
-[e = _lock_state -> -> 0 `i `uc ]
-"183
-[; ;main.c: 183:             HAL_UART_WriteString(".");
-}
+"170
+[; ;bai2.c: 170:             HAL_UART_WriteString(",LED:"); HAL_UART_WriteInt(lock_state);
+[e $U 151  ]
+"172
+[; ;bai2.c: 172:         }
 [e :U 174 ]
-"184
-[; ;main.c: 184:             if (v_frac < 10) HAL_UART_WriteString("0");
-[e $U 152  ]
-"186
-[; ;main.c: 186: 
-[e :U 175 ]
-"187
-[; ;main.c: 187: 
+"173
+[; ;bai2.c: 173: 
 [e = _lock_state -> -> 0 `i `uc ]
-"188
-[; ;main.c: 188:             HAL_UART_WriteString(",LED:"); HAL_UART_WriteInt(lock_state);
-[e $U 152  ]
-"189
-[; ;main.c: 189:             HAL_UART_WriteString("\n");
+"174
+[; ;bai2.c: 174: 
+[e $U 151  ]
+"175
+[; ;bai2.c: 175:         _delay((unsigned long)((20)*(20000000UL/4000.0)));
 }
-[e $U 152  ]
-[e :U 153 ]
-[e [\ _lock_state , $ -> 0 `i 154
- , $ -> 1 `i 160
- , $ -> 2 `i 165
- , $ -> 3 `i 170
- 175 ]
+[e $U 151  ]
 [e :U 152 ]
-"195
-[; ;main.c: 195: }
+[e [\ _lock_state , $ -> 0 `i 153
+ , $ -> 1 `i 159
+ , $ -> 2 `i 164
+ , $ -> 3 `i 169
+ 174 ]
+[e :U 151 ]
+"178
 [e = _p_bt1 _c_bt1 ]
 [e = _p_bt2 _c_bt2 ]
 [e = _p_bt3 _c_bt3 ]
 [e = _p_bt4 _c_bt4 ]
-"198
-[e $ ! >= - ( _SysTick_GetMs ..  _last_uart_time -> -> -> 100 `i `l `ul 176  ]
+"181
+[e $ ! >= - ( _SysTick_GetMs ..  _last_uart_time -> -> -> 100 `i `l `ul 175  ]
 {
-"199
+"182
 [e = _last_uart_time ( _SysTick_GetMs ..  ]
-"201
+"184
 [v _adc_val `us ~T0 @X0 1 a ]
 [e = _adc_val ( _HAL_ADC_Read (1 -> -> 0 `i `uc ]
-"202
+"185
 [v _v_int `us ~T0 @X0 1 a ]
 [e = _v_int -> / * -> _adc_val `ui -> -> 5 `i `ui -> -> 1023 `i `ui `us ]
-"203
+"186
 [v _v_frac `us ~T0 @X0 1 a ]
 [e = _v_frac -> % / * -> _adc_val `ui -> -> 500 `i `ui -> -> 1023 `i `ui -> -> 100 `i `ui `us ]
-"205
+"188
 [e ( _HAL_UART_WriteString (1 :s 1C ]
 [e ( _HAL_UART_WriteInt (1 _adc_val ]
-"206
+"189
 [e ( _HAL_UART_WriteString (1 :s 2C ]
 [e ( _HAL_UART_WriteInt (1 _v_int ]
-"207
+"190
 [e ( _HAL_UART_WriteString (1 :s 3C ]
-"208
-[e $ ! < -> _v_frac `ui -> -> 10 `i `ui 177  ]
+"191
+[e $ ! < -> _v_frac `ui -> -> 10 `i `ui 176  ]
 [e ( _HAL_UART_WriteString (1 :s 4C ]
-[e :U 177 ]
-"209
+[e :U 176 ]
+"192
 [e ( _HAL_UART_WriteInt (1 _v_frac ]
-"212
+"194
 [e ( _HAL_UART_WriteString (1 :s 5C ]
 [e ( _HAL_UART_WriteInt (1 -> _lock_state `us ]
-"213
+"195
 [e ( _HAL_UART_WriteString (1 :s 6C ]
-"214
+"196
 }
-[e :U 176 ]
-"217
+[e :U 175 ]
+"199
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `ul `d .4000.0 `ul ]
-"218
+"200
 }
-[e :U 148 ]
-[e $U 149  ]
-[e :U 150 ]
-"219
-[e :UE 147 ]
+[e :U 147 ]
+[e $U 148  ]
+[e :U 149 ]
+"201
+[e :UE 146 ]
 }
 [a 2C 44 86 79 76 84 58 0 ]
 [a 5C 44 76 69 68 58 0 ]

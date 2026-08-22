@@ -50,6 +50,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "927
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 927: extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
 [v _CCPR1L `Vuc ~T0 @X0 0 e@21 ]
+"1174
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1174:     struct {
+[s S46 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . CCP2M DC2B0 DC2B1 ]
+"1179
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1179:     struct {
+[s S47 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S47 . CCP2M0 CCP2M1 CCP2M2 CCP2M3 CCP2Y CCP2X ]
+"1173
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1173: typedef union {
+[u S45 `S46 1 `S47 1 ]
+[n S45 . . . ]
+"1188
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1188: extern volatile CCP2CONbits_t CCP2CONbits __attribute__((address(0x01D)));
+[v _CCP2CONbits `VS45 ~T0 @X0 0 e@29 ]
+"1154
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1154: extern volatile unsigned char CCPR2L __attribute__((address(0x01B)));
+[v _CCPR2L `Vuc ~T0 @X0 0 e@27 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -345,4 +363,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [; ;hal/hal_pwm/hal_pwm.c: 30: }
 [e :UE 143 ]
+}
+"32
+[; ;hal/hal_pwm/hal_pwm.c: 32: void HAL_PWM_CCP2_Init(void) {
+[v _HAL_PWM_CCP2_Init `(v ~T0 @X0 1 ef ]
+{
+[e :U _HAL_PWM_CCP2_Init ]
+[f ]
+"33
+[; ;hal/hal_pwm/hal_pwm.c: 33:     CCP2CONbits.CCP2M3 = 1;
+[e = . . _CCP2CONbits 1 3 -> -> 1 `i `uc ]
+"34
+[; ;hal/hal_pwm/hal_pwm.c: 34:     CCP2CONbits.CCP2M2 = 1;
+[e = . . _CCP2CONbits 1 2 -> -> 1 `i `uc ]
+"35
+[; ;hal/hal_pwm/hal_pwm.c: 35:     TRISCbits.TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"36
+[; ;hal/hal_pwm/hal_pwm.c: 36: }
+[e :UE 145 ]
+}
+"38
+[; ;hal/hal_pwm/hal_pwm.c: 38: void HAL_PWM_SetDuty_CCP2(uint16_t duty) {
+[v _HAL_PWM_SetDuty_CCP2 `(v ~T0 @X0 1 ef1`us ]
+{
+[e :U _HAL_PWM_SetDuty_CCP2 ]
+[v _duty `us ~T0 @X0 1 r1 ]
+[f ]
+"39
+[; ;hal/hal_pwm/hal_pwm.c: 39:     if (duty > 1023) { duty = 1023; }
+[e $ ! > -> _duty `ui -> -> 1023 `i `ui 147  ]
+{
+[e = _duty -> -> 1023 `i `us ]
+}
+[e :U 147 ]
+"40
+[; ;hal/hal_pwm/hal_pwm.c: 40:     uint32_t mapped_duty = ((uint32_t)duty * 1000) / 1023;
+[v _mapped_duty `ul ~T0 @X0 1 a ]
+[e = _mapped_duty / * -> _duty `ul -> -> -> 1000 `i `l `ul -> -> -> 1023 `i `l `ul ]
+"42
+[; ;hal/hal_pwm/hal_pwm.c: 42:     CCP2CONbits.DC2B1 = (mapped_duty & 2) ? 1 : 0;
+[e = . . _CCP2CONbits 0 2 -> ? != & _mapped_duty -> -> -> 2 `i `l `ul -> -> -> 0 `i `l `ul : -> 1 `i -> 0 `i `uc ]
+"43
+[; ;hal/hal_pwm/hal_pwm.c: 43:     CCP2CONbits.DC2B0 = (mapped_duty & 1) ? 1 : 0;
+[e = . . _CCP2CONbits 0 1 -> ? != & _mapped_duty -> -> -> 1 `i `l `ul -> -> -> 0 `i `l `ul : -> 1 `i -> 0 `i `uc ]
+"44
+[; ;hal/hal_pwm/hal_pwm.c: 44:     CCPR2L = (uint8_t)(mapped_duty >> 2);
+[e = _CCPR2L -> >> _mapped_duty -> 2 `i `uc ]
+"45
+[; ;hal/hal_pwm/hal_pwm.c: 45: }
+[e :UE 146 ]
 }

@@ -1,4 +1,4 @@
-# 1 "hal/hal_uart/hal_uart.c"
+# 1 "hal/hal_extint/hal_extint.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,111 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "hal/hal_uart/hal_uart.c" 2
-# 1 "hal/hal_uart/hal_uart.h" 1
+# 1 "hal/hal_extint/hal_extint.c" 2
 
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
-# 26 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 133 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned short uintptr_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
-typedef short intptr_t;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
-typedef signed char int8_t;
+# 1 "hal/hal_extint/hal_extint.h" 1
 
 
 
 
-typedef short int16_t;
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-typedef long int32_t;
-# 192 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
-typedef int32_t intmax_t;
-
-
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-typedef unsigned long uint32_t;
-# 233 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
-typedef uint32_t uintmax_t;
-# 27 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
-
-typedef int8_t int_fast8_t;
-
-
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-
-
-
-typedef uint8_t uint_fast8_t;
-
-
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 149 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
-# 4 "hal/hal_uart/hal_uart.h" 2
-
-void HAL_UART_Init(uint32_t baud_rate);
-void HAL_UART_WriteChar(char bt);
-void HAL_UART_WriteString(const char* str);
-void HAL_UART_WriteInt(uint16_t val);
-char HAL_UART_ReadChar(void);
-# 2 "hal/hal_uart/hal_uart.c" 2
+void HAL_ExtInt_RB0_Init(void);
+# 3 "hal/hal_extint/hal_extint.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -123,7 +27,16 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 2 3
+
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 3
@@ -132,6 +45,10 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 128 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
 typedef unsigned size_t;
+# 174 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 210 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdlib.h" 2 3
 
 int atoi (const char *);
@@ -217,7 +134,79 @@ extern void __builtin_software_breakpoint(void);
 
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 1 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef signed char int8_t;
 
+
+
+
+typedef short int16_t;
+# 179 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long int32_t;
+# 192 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef int32_t intmax_t;
+
+
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 215 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+# 233 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/alltypes.h" 3
+typedef uint32_t uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+
+
+
+typedef uint8_t uint_fast8_t;
+
+
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 149 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -2685,63 +2674,9 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 3 "hal/hal_uart/hal_uart.c" 2
+# 4 "hal/hal_extint/hal_extint.c" 2
 
-
-
-void HAL_UART_Init(uint32_t baud_rate) {
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
-
-    SPBRG = (uint8_t)((20000000 / 16) / baud_rate) - 1;
-
-    TXSTAbits.BRGH = 1;
-    TXSTAbits.SYNC = 0;
-    RCSTAbits.SPEN = 1;
-
-    TXSTAbits.TXEN = 1;
-    RCSTAbits.CREN = 1;
-
-    TXSTAbits.TX9 = 0;
-    RCSTAbits.RX9 = 0;
-}
-
-void HAL_UART_WriteChar(char bt) {
-    while (!TXSTAbits.TRMT);
-    TXREG = bt;
-}
-
-void HAL_UART_WriteString(const char* str) {
-    while (*str) {
-        HAL_UART_WriteChar(*str++);
-    }
-}
-
-void HAL_UART_WriteInt(uint16_t val) {
-    char buffer[6];
-    int i = 0, j;
-
-    if (val == 0) {
-        HAL_UART_WriteChar('0');
-        return;
-    }
-
-    while (val > 0) {
-        buffer[i++] = (val % 10) + '0';
-        val /= 10;
-    }
-
-    for (j = i - 1; j >= 0; j--) {
-        HAL_UART_WriteChar(buffer[j]);
-    }
-}
-
-char HAL_UART_ReadChar(void) {
-
-    if (RCSTAbits.OERR) {
-        RCSTAbits.CREN = 0;
-        RCSTAbits.CREN = 1;
-    }
-
-    return RCREG;
+void HAL_ExtInt_RB0_Init(void) {
+    OPTION_REGbits.INTEDG = 1;
+    INTCONbits.INTE = 1;
 }

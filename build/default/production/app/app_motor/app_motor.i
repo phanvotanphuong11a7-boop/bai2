@@ -1,4 +1,4 @@
-# 1 "hal/hal_uart/hal_uart.c"
+# 1 "app/app_motor/app_motor.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,8 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "hal/hal_uart/hal_uart.c" 2
-# 1 "hal/hal_uart/hal_uart.h" 1
+# 1 "app/app_motor/app_motor.c" 2
+# 1 "app/app_motor/app_motor.h" 1
+
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 1 3
@@ -103,14 +104,21 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdint.h" 2 3
-# 4 "hal/hal_uart/hal_uart.h" 2
+# 5 "app/app_motor/app_motor.h" 2
 
-void HAL_UART_Init(uint32_t baud_rate);
-void HAL_UART_WriteChar(char bt);
-void HAL_UART_WriteString(const char* str);
-void HAL_UART_WriteInt(uint16_t val);
-char HAL_UART_ReadChar(void);
-# 2 "hal/hal_uart/hal_uart.c" 2
+
+void Motor_Ramp(uint16_t start_duty, uint16_t target_duty);
+# 2 "app/app_motor/app_motor.c" 2
+# 1 "app/app_motor/../../hal/hal_pwm/hal_pwm.h" 1
+
+
+
+
+void HAL_PWM_Init(void);
+void HAL_PWM_SetDuty(uint16_t duty);
+void HAL_PWM_CCP2_Init(void);
+void HAL_PWM_SetDuty_CCP2(uint16_t duty);
+# 3 "app/app_motor/app_motor.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2685,63 +2693,28 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 3 "hal/hal_uart/hal_uart.c" 2
+# 4 "app/app_motor/app_motor.c" 2
 
 
 
-void HAL_UART_Init(uint32_t baud_rate) {
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
 
-    SPBRG = (uint8_t)((20000000 / 16) / baud_rate) - 1;
 
-    TXSTAbits.BRGH = 1;
-    TXSTAbits.SYNC = 0;
-    RCSTAbits.SPEN = 1;
 
-    TXSTAbits.TXEN = 1;
-    RCSTAbits.CREN = 1;
-
-    TXSTAbits.TX9 = 0;
-    RCSTAbits.RX9 = 0;
-}
-
-void HAL_UART_WriteChar(char bt) {
-    while (!TXSTAbits.TRMT);
-    TXREG = bt;
-}
-
-void HAL_UART_WriteString(const char* str) {
-    while (*str) {
-        HAL_UART_WriteChar(*str++);
+void Motor_Ramp(uint16_t start_duty, uint16_t target_duty) {
+    if (start_duty < target_duty) {
+        for (uint16_t i = start_duty; i <= target_duty; i += 5) {
+            HAL_PWM_SetDuty(i);
+            HAL_PWM_SetDuty_CCP2(i);
+            _delay((unsigned long)((3)*(20000000/4000.0)));
+        }
+    } else {
+        for (uint16_t i = start_duty; i > target_duty; i -= 5) {
+            HAL_PWM_SetDuty(i);
+            HAL_PWM_SetDuty_CCP2(i);
+            _delay((unsigned long)((3)*(20000000/4000.0)));
+            if (i < 5) break;
+        }
     }
-}
-
-void HAL_UART_WriteInt(uint16_t val) {
-    char buffer[6];
-    int i = 0, j;
-
-    if (val == 0) {
-        HAL_UART_WriteChar('0');
-        return;
-    }
-
-    while (val > 0) {
-        buffer[i++] = (val % 10) + '0';
-        val /= 10;
-    }
-
-    for (j = i - 1; j >= 0; j--) {
-        HAL_UART_WriteChar(buffer[j]);
-    }
-}
-
-char HAL_UART_ReadChar(void) {
-
-    if (RCSTAbits.OERR) {
-        RCSTAbits.CREN = 0;
-        RCSTAbits.CREN = 1;
-    }
-
-    return RCREG;
+    HAL_PWM_SetDuty(target_duty);
+    HAL_PWM_SetDuty_CCP2(target_duty);
 }

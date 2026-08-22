@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "bai2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 295 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "bai2.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2666,16 +2666,16 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 2 3
-# 2 "main.c" 2
+# 2 "bai2.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include\\c99/stdbool.h" 1 3
-# 4 "main.c" 2
+# 4 "bai2.c" 2
 
 # 1 "./sys/sys_config/sys_config.h" 1
 
 
 void sys_config(void);
-# 6 "main.c" 2
+# 6 "bai2.c" 2
 # 1 "./sys/sys_tick/sys_tick.h" 1
 
 
@@ -2684,7 +2684,7 @@ void sys_config(void);
 void SysTick_Init(void);
 void SysTick_Update(void);
 uint32_t SysTick_GetMs(void);
-# 7 "main.c" 2
+# 7 "bai2.c" 2
 # 1 "./hal/hal_gpio/hal_gpio.h" 1
 
 
@@ -2713,7 +2713,7 @@ void HAL_GPIO_SetDirection(gpio_port_t port, gpio_pin_t pin, gpio_dir_t dir);
 void HAL_GPIO_PullUpEnable(gpio_pin_t pin);
 void HAL_GPIO_WritePin(gpio_port_t port, gpio_pin_t pin, gpio_state_t state);
 gpio_state_t HAL_GPIO_ReadPin(gpio_port_t port, gpio_pin_t pin);
-# 8 "main.c" 2
+# 8 "bai2.c" 2
 # 1 "./hal/hal_pwm/hal_pwm.h" 1
 
 
@@ -2721,7 +2721,9 @@ gpio_state_t HAL_GPIO_ReadPin(gpio_port_t port, gpio_pin_t pin);
 
 void HAL_PWM_Init(void);
 void HAL_PWM_SetDuty(uint16_t duty);
-# 9 "main.c" 2
+void HAL_PWM_CCP2_Init(void);
+void HAL_PWM_SetDuty_CCP2(uint16_t duty);
+# 9 "bai2.c" 2
 # 1 "./hal/hal_adc/hal_adc.h" 1
 
 
@@ -2729,7 +2731,7 @@ void HAL_PWM_SetDuty(uint16_t duty);
 
 void HAL_ADC_Init(void);
 uint16_t HAL_ADC_Read(uint8_t channel);
-# 10 "main.c" 2
+# 10 "bai2.c" 2
 # 1 "./hal/hal_uart/hal_uart.h" 1
 
 
@@ -2739,7 +2741,8 @@ void HAL_UART_Init(uint32_t baud_rate);
 void HAL_UART_WriteChar(char bt);
 void HAL_UART_WriteString(const char* str);
 void HAL_UART_WriteInt(uint16_t val);
-# 11 "main.c" 2
+char HAL_UART_ReadChar(void);
+# 11 "bai2.c" 2
 
 
 #pragma config FOSC = HS
@@ -2765,19 +2768,14 @@ void __attribute__((picinterrupt(("")))) ISR(void) {
         INTCONbits.T0IF = 0;
     }
 
+if (PIE1bits.RCIE && PIR1bits.RCIF) {
+    char temp_rx = HAL_UART_ReadChar();
 
-    if (PIE1bits.RCIE && PIR1bits.RCIF) {
-        char temp_rx = RCREG;
 
-
-        if (temp_rx != '\n' && temp_rx != '\r') {
-            rx_cmd = temp_rx;
-        }
-        if (RCSTAbits.OERR) {
-            RCSTAbits.CREN = 0;
-            RCSTAbits.CREN = 1;
-        }
+    if (temp_rx != '\n' && temp_rx != '\r') {
+       rx_cmd = temp_rx;
     }
+ }
 }
 
 int main(void) {
@@ -2787,7 +2785,6 @@ int main(void) {
     HAL_UART_Init(9600);
     SysTick_Init();
 
-
     PIE1bits.RCIE = 1;
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
@@ -2796,23 +2793,18 @@ int main(void) {
     uint32_t start_time = 0;
     _Bool pot_enabled = 0;
 
-
     _Bool p_bt1 = 1, p_bt2 = 1, p_bt3 = 1, p_bt4 = 1;
     uint32_t last_uart_time = 0;
 
     while(1) {
-
         _Bool c_bt1 = (HAL_GPIO_ReadPin(PORT_B, PIN_3) == GPIO_LOW);
         _Bool c_bt2 = (HAL_GPIO_ReadPin(PORT_B, PIN_4) == GPIO_LOW);
         _Bool c_bt3 = (HAL_GPIO_ReadPin(PORT_B, PIN_5) == GPIO_LOW);
         _Bool c_bt4 = (HAL_GPIO_ReadPin(PORT_B, PIN_2) == GPIO_LOW);
-
-
         _Bool press_bt1 = (c_bt1 && !p_bt1);
         _Bool press_bt2 = (c_bt2 && !p_bt2);
         _Bool press_bt3 = (c_bt3 && !p_bt3);
         _Bool press_bt4 = (c_bt4 && !p_bt4);
-
 
         if (rx_cmd == 'R') {
             lock_state = 0;
@@ -2823,9 +2815,6 @@ int main(void) {
             pot_enabled = 0;
             rx_cmd = 0;
         }
-
-
-
 
         switch(lock_state) {
             case 0:
@@ -2921,9 +2910,6 @@ int main(void) {
         }
 
 
-
-
-
         p_bt1 = c_bt1; p_bt2 = c_bt2; p_bt3 = c_bt3; p_bt4 = c_bt4;
 
 
@@ -2939,7 +2925,6 @@ int main(void) {
             HAL_UART_WriteString(".");
             if (v_frac < 10) HAL_UART_WriteString("0");
             HAL_UART_WriteInt(v_frac);
-
 
             HAL_UART_WriteString(",LED:"); HAL_UART_WriteInt(lock_state);
             HAL_UART_WriteString("\n");

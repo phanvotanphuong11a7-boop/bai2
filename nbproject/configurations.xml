@@ -10,6 +10,9 @@
       <itemPath>sys/sys_tick/sys_tick.h</itemPath>
       <itemPath>hal/hal_adc/hal_adc.h</itemPath>
       <itemPath>hal/hal_uart/hal_uart.h</itemPath>
+      <itemPath>hal/hal_timer1/hal_timer1.h</itemPath>
+      <itemPath>app/app_motor/app_motor.h</itemPath>
+      <itemPath>hal/hal_extint/hal_extint.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -29,7 +32,11 @@
       <itemPath>sys/sys_tick/sys_tick.c</itemPath>
       <itemPath>hal/hal_uart/hal_uart.c</itemPath>
       <itemPath>hal/hal_adc/hal_adc.c</itemPath>
-      <itemPath>main.c</itemPath>
+      <itemPath>bai3.c</itemPath>
+      <itemPath>hal/hal_timer1/hal_timer1.c</itemPath>
+      <itemPath>app/app_motor/app_motor.c</itemPath>
+      <itemPath>hal/hal_extint/hal_extint.c</itemPath>
+      <itemPath>bai2.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

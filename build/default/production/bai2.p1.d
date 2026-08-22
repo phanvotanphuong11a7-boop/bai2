@@ -1,5 +1,5 @@
-build/default/production/main.p1:  \
-main.c  \
+build/default/production/bai2.p1:  \
+bai2.c  \
 sys/sys_config/sys_config.h  \
 sys/sys_tick/sys_tick.h  \
 hal/hal_gpio/hal_gpio.h  \

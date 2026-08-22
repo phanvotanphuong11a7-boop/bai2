@@ -49,3 +49,13 @@ void HAL_UART_WriteInt(uint16_t val) {
         HAL_UART_WriteChar(buffer[j]);
     }
 }
+
+char HAL_UART_ReadChar(void) {
+    /* X? lý l?i tràn b? ??m ph?n c?ng (Overrun Error) tr??c khi ??c */
+    if (RCSTAbits.OERR) {
+        RCSTAbits.CREN = 0; 
+        RCSTAbits.CREN = 1;
+    }
+    /* Tr? v? d? li?u nh?n ???c (??c RCREG c?ng t? ??ng xóa c? RCIF) */
+    return RCREG;
+}

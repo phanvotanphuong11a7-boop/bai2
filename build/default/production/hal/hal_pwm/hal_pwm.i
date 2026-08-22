@@ -107,6 +107,8 @@ typedef uint32_t uint_fast32_t;
 
 void HAL_PWM_Init(void);
 void HAL_PWM_SetDuty(uint16_t duty);
+void HAL_PWM_CCP2_Init(void);
+void HAL_PWM_SetDuty_CCP2(uint16_t duty);
 # 2 "hal/hal_pwm/hal_pwm.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/xc.h" 3
@@ -2710,4 +2712,19 @@ void HAL_PWM_SetDuty(uint16_t duty) {
     CCP1CONbits.DC1B1 = (mapped_duty & 2) ? 1 : 0;
     CCP1CONbits.DC1B0 = (mapped_duty & 1) ? 1 : 0;
     CCPR1L = (uint8_t)(mapped_duty >> 2);
+}
+
+void HAL_PWM_CCP2_Init(void) {
+    CCP2CONbits.CCP2M3 = 1;
+    CCP2CONbits.CCP2M2 = 1;
+    TRISCbits.TRISC1 = 0;
+}
+
+void HAL_PWM_SetDuty_CCP2(uint16_t duty) {
+    if (duty > 1023) { duty = 1023; }
+    uint32_t mapped_duty = ((uint32_t)duty * 1000) / 1023;
+
+    CCP2CONbits.DC2B1 = (mapped_duty & 2) ? 1 : 0;
+    CCP2CONbits.DC2B0 = (mapped_duty & 1) ? 1 : 0;
+    CCPR2L = (uint8_t)(mapped_duty >> 2);
 }

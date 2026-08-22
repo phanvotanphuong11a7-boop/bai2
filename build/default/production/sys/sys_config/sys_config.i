@@ -2729,4 +2729,21 @@ void sys_config(void) {
     HAL_GPIO_SetDirection(PORT_B, PIN_3, GPIO_DIR_INPUT); HAL_GPIO_PullUpEnable(PIN_3);
     HAL_GPIO_SetDirection(PORT_B, PIN_4, GPIO_DIR_INPUT); HAL_GPIO_PullUpEnable(PIN_4);
     HAL_GPIO_SetDirection(PORT_B, PIN_5, GPIO_DIR_INPUT); HAL_GPIO_PullUpEnable(PIN_5);
+
+
+    HAL_GPIO_SetDirection(PORT_D, PIN_0, GPIO_DIR_OUTPUT);
+    HAL_GPIO_SetDirection(PORT_D, PIN_1, GPIO_DIR_OUTPUT);
+    HAL_GPIO_SetDirection(PORT_C, PIN_1, GPIO_DIR_OUTPUT);
+
+    HAL_GPIO_WritePin(PORT_D, PIN_0, GPIO_LOW);
+    HAL_GPIO_WritePin(PORT_D, PIN_1, GPIO_LOW);
+    HAL_GPIO_WritePin(PORT_C, PIN_1, GPIO_LOW);
+
+
+    HAL_GPIO_SetDirection(PORT_B, PIN_0, GPIO_DIR_INPUT);
+    HAL_GPIO_SetDirection(PORT_B, PIN_1, GPIO_DIR_INPUT);
+
+
+    ANSELHbits.ANS12 = 0;
+    ANSELHbits.ANS10 = 0;
 }

@@ -1,66 +1,40 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"1546 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1546:     struct {
-[s S61 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S61 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"1545
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1545: typedef union {
-[u S60 `S61 1 ]
-[n S60 . . ]
-"1557
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
-[v _TRISCbits `VS60 ~T0 @X0 0 e@135 ]
-"2642
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2642: extern volatile unsigned char SPBRG __attribute__((address(0x099)));
-[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
-"2562
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2562:     struct {
-[s S103 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S103 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"2572
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2572:     struct {
-[s S104 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
-[n S104 . TXD8 . nTX8 ]
-"2577
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2577:     struct {
-[s S105 :6 `uc 1 :1 `uc 1 ]
-[n S105 . . TX8_9 ]
-"2561
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2561: typedef union {
-[u S102 `S103 1 `S104 1 `S105 1 ]
-[n S102 . . . . ]
-"2582
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 2582: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x098)));
-[v _TXSTAbits `VS102 ~T0 @X0 0 e@152 ]
-"1044
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1044:     struct {
-[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S41 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"1054
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1054:     struct {
-[s S42 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
-[n S42 . RCD8 . RC9 ]
-"1059
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1059:     struct {
-[s S43 :6 `uc 1 :1 `uc 1 ]
-[n S43 . . nRC8 ]
-"1063
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1063:     struct {
-[s S44 :6 `uc 1 :1 `uc 1 ]
-[n S44 . . RC8_9 ]
-"1043
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1043: typedef union {
-[u S40 `S41 1 `S42 1 `S43 1 `S44 1 ]
-[n S40 . . . . . ]
-"1068
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1068: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
-[v _RCSTAbits `VS40 ~T0 @X0 0 e@24 ]
-"1133
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
-[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"1140
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
-[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"677 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 677:     struct {
+[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S27 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS TMR1GE T1GINV ]
+"686
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 686:     struct {
+[s S28 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S28 . . T1INSYNC . T1CKPS0 T1CKPS1 . T1GIV ]
+"695
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 695:     struct {
+[s S29 :2 `uc 1 :1 `uc 1 ]
+[n S29 . . T1SYNC ]
+"676
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 676: typedef union {
+[u S26 `S27 1 `S28 1 `S29 1 ]
+[n S26 . . . . ]
+"700
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 700: extern volatile T1CONbits_t T1CONbits __attribute__((address(0x010)));
+[v _T1CONbits `VS26 ~T0 @X0 0 e@16 ]
+"664
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 664: extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
+[v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
+"657
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 657: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"1708
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1708:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE ]
+"1707
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1707: typedef union {
+[u S66 `S67 1 ]
+[n S66 . . ]
+"1718
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+[v _PIE1bits `VS66 ~T0 @X0 0 e@140 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -295,190 +269,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"6 hal/hal_uart/hal_uart.c
-[; ;hal/hal_uart/hal_uart.c: 6: void HAL_UART_Init(uint32_t baud_rate) {
-[v _HAL_UART_Init `(v ~T0 @X0 1 ef1`ul ]
+"5 hal/hal_timer1/hal_timer1.c
+[; ;hal/hal_timer1/hal_timer1.c: 5: void HAL_Timer1_Init(void) {
+[v _HAL_Timer1_Init `(v ~T0 @X0 1 ef ]
 {
-[e :U _HAL_UART_Init ]
-[v _baud_rate `ul ~T0 @X0 1 r1 ]
+[e :U _HAL_Timer1_Init ]
 [f ]
+"6
+[; ;hal/hal_timer1/hal_timer1.c: 6:     T1CONbits.TMR1CS = 0;
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
 "7
-[; ;hal/hal_uart/hal_uart.c: 7:     TRISCbits.TRISC6 = 0;
-[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"8
-[; ;hal/hal_uart/hal_uart.c: 8:     TRISCbits.TRISC7 = 1;
-[e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
+[; ;hal/hal_timer1/hal_timer1.c: 7:     T1CONbits.T1CKPS = 0b11;
+[e = . . _T1CONbits 0 4 -> -> 3 `i `uc ]
+"9
+[; ;hal/hal_timer1/hal_timer1.c: 9:     TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
 "10
-[; ;hal/hal_uart/hal_uart.c: 10:     SPBRG = (uint8_t)((20000000 / 16) / baud_rate) - 1;
-[e = _SPBRG -> - -> -> / -> / -> 20000000 `l -> -> 16 `i `l `ul _baud_rate `uc `i -> 1 `i `uc ]
+[; ;hal/hal_timer1/hal_timer1.c: 10:     TMR1L = 0xDC;
+[e = _TMR1L -> -> 220 `i `uc ]
 "12
-[; ;hal/hal_uart/hal_uart.c: 12:     TXSTAbits.BRGH = 1;
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+[; ;hal/hal_timer1/hal_timer1.c: 12:     T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
 "13
-[; ;hal/hal_uart/hal_uart.c: 13:     TXSTAbits.SYNC = 0;
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;hal/hal_timer1/hal_timer1.c: 13:     PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
 "14
-[; ;hal/hal_uart/hal_uart.c: 14:     RCSTAbits.SPEN = 1;
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"16
-[; ;hal/hal_uart/hal_uart.c: 16:     TXSTAbits.TXEN = 1;
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"17
-[; ;hal/hal_uart/hal_uart.c: 17:     RCSTAbits.CREN = 1;
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"19
-[; ;hal/hal_uart/hal_uart.c: 19:     TXSTAbits.TX9 = 0;
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-"20
-[; ;hal/hal_uart/hal_uart.c: 20:     RCSTAbits.RX9 = 0;
-[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-"21
-[; ;hal/hal_uart/hal_uart.c: 21: }
+[; ;hal/hal_timer1/hal_timer1.c: 14: }
 [e :UE 142 ]
-}
-"23
-[; ;hal/hal_uart/hal_uart.c: 23: void HAL_UART_WriteChar(char bt) {
-[v _HAL_UART_WriteChar `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _HAL_UART_WriteChar ]
-[v _bt `uc ~T0 @X0 1 r1 ]
-[f ]
-"24
-[; ;hal/hal_uart/hal_uart.c: 24:     while (!TXSTAbits.TRMT);
-[e $U 144  ]
-[e :U 145 ]
-[e :U 144 ]
-[e $ ! != -> . . _TXSTAbits 0 1 `i -> 0 `i 145  ]
-[e :U 146 ]
-"25
-[; ;hal/hal_uart/hal_uart.c: 25:     TXREG = bt;
-[e = _TXREG -> _bt `uc ]
-"26
-[; ;hal/hal_uart/hal_uart.c: 26: }
-[e :UE 143 ]
-}
-"28
-[; ;hal/hal_uart/hal_uart.c: 28: void HAL_UART_WriteString(const char* str) {
-[v _HAL_UART_WriteString `(v ~T0 @X0 1 ef1`*Cuc ]
-{
-[e :U _HAL_UART_WriteString ]
-[v _str `*Cuc ~T0 @X0 1 r1 ]
-[f ]
-"29
-[; ;hal/hal_uart/hal_uart.c: 29:     while (*str) {
-[e $U 148  ]
-[e :U 149 ]
-{
-"30
-[; ;hal/hal_uart/hal_uart.c: 30:         HAL_UART_WriteChar(*str++);
-[e ( _HAL_UART_WriteChar (1 *U ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
-"31
-[; ;hal/hal_uart/hal_uart.c: 31:     }
-}
-[e :U 148 ]
-"29
-[; ;hal/hal_uart/hal_uart.c: 29:     while (*str) {
-[e $ != -> *U _str `i -> 0 `i 149  ]
-[e :U 150 ]
-"32
-[; ;hal/hal_uart/hal_uart.c: 32: }
-[e :UE 147 ]
-}
-"34
-[; ;hal/hal_uart/hal_uart.c: 34: void HAL_UART_WriteInt(uint16_t val) {
-[v _HAL_UART_WriteInt `(v ~T0 @X0 1 ef1`us ]
-{
-[e :U _HAL_UART_WriteInt ]
-[v _val `us ~T0 @X0 1 r1 ]
-[f ]
-"35
-[; ;hal/hal_uart/hal_uart.c: 35:     char buffer[6];
-[v _buffer `uc ~T0 @X0 -> 6 `i a ]
-"36
-[; ;hal/hal_uart/hal_uart.c: 36:     int i = 0, j;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[v _j `i ~T0 @X0 1 a ]
-"38
-[; ;hal/hal_uart/hal_uart.c: 38:     if (val == 0) {
-[e $ ! == -> _val `ui -> -> 0 `i `ui 152  ]
-{
-"39
-[; ;hal/hal_uart/hal_uart.c: 39:         HAL_UART_WriteChar('0');
-[e ( _HAL_UART_WriteChar (1 -> -> 48 `ui `uc ]
-"40
-[; ;hal/hal_uart/hal_uart.c: 40:         return;
-[e $UE 151  ]
-"41
-[; ;hal/hal_uart/hal_uart.c: 41:     }
-}
-[e :U 152 ]
-"43
-[; ;hal/hal_uart/hal_uart.c: 43:     while (val > 0) {
-[e $U 153  ]
-[e :U 154 ]
-{
-"44
-[; ;hal/hal_uart/hal_uart.c: 44:         buffer[i++] = (val % 10) + '0';
-[e = *U + &U _buffer * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> + % -> _val `ui -> -> 10 `i `ui -> 48 `ui `uc ]
-"45
-[; ;hal/hal_uart/hal_uart.c: 45:         val /= 10;
-[e =/ _val -> -> 10 `i `ui ]
-"46
-[; ;hal/hal_uart/hal_uart.c: 46:     }
-}
-[e :U 153 ]
-"43
-[; ;hal/hal_uart/hal_uart.c: 43:     while (val > 0) {
-[e $ > -> _val `ui -> -> 0 `i `ui 154  ]
-[e :U 155 ]
-"48
-[; ;hal/hal_uart/hal_uart.c: 48:     for (j = i - 1; j >= 0; j--) {
-{
-[e = _j - _i -> 1 `i ]
-[e $ >= _j -> 0 `i 156  ]
-[e $U 157  ]
-[e :U 156 ]
-{
-"49
-[; ;hal/hal_uart/hal_uart.c: 49:         HAL_UART_WriteChar(buffer[j]);
-[e ( _HAL_UART_WriteChar (1 *U + &U _buffer * -> -> _j `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"50
-[; ;hal/hal_uart/hal_uart.c: 50:     }
-}
-[e -- _j -> 1 `i ]
-[e $ >= _j -> 0 `i 156  ]
-[e :U 157 ]
-}
-"51
-[; ;hal/hal_uart/hal_uart.c: 51: }
-[e :UE 151 ]
-}
-"53
-[; ;hal/hal_uart/hal_uart.c: 53: char HAL_UART_ReadChar(void) {
-[v _HAL_UART_ReadChar `(uc ~T0 @X0 1 ef ]
-{
-[e :U _HAL_UART_ReadChar ]
-[f ]
-"55
-[; ;hal/hal_uart/hal_uart.c: 55:     if (RCSTAbits.OERR) {
-[e $ ! != -> . . _RCSTAbits 0 1 `i -> 0 `i 160  ]
-{
-"56
-[; ;hal/hal_uart/hal_uart.c: 56:         RCSTAbits.CREN = 0;
-[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-"57
-[; ;hal/hal_uart/hal_uart.c: 57:         RCSTAbits.CREN = 1;
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"58
-[; ;hal/hal_uart/hal_uart.c: 58:     }
-}
-[e :U 160 ]
-"60
-[; ;hal/hal_uart/hal_uart.c: 60:     return RCREG;
-[e ) -> _RCREG `uc ]
-[e $UE 159  ]
-"61
-[; ;hal/hal_uart/hal_uart.c: 61: }
-[e :UE 159 ]
 }
